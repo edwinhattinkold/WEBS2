@@ -1,8 +1,5 @@
 <?php include 'header.php'; ?>
 	<div id="submenu_border">
-	</div>
-	<div id="rechter_lijn">
-	</div>
 <div id = "tekst">
 	<h2>About</h2>
 	<br />
