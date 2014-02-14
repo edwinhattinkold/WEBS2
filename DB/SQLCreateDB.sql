@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `mydb`.`products` ;
 CREATE TABLE IF NOT EXISTS `mydb`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `price` INT NOT NULL,
+  `price` DECIMAL(5,2) NOT NULL,
   `description` VARCHAR(1000) NULL,
   `image` VARCHAR(500) NULL,
   `category_name` VARCHAR(45) NOT NULL,
