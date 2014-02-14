@@ -11,10 +11,9 @@ USE `mydb` ;
 DROP TABLE IF EXISTS `mydb`.`category` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`category` (
-  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
+  `description` VARCHAR(1000) NULL,
+  PRIMARY KEY (`name`))
 ENGINE = InnoDB;
 
 
@@ -28,12 +27,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`products` (
   `name` VARCHAR(45) NOT NULL,
   `price` INT NOT NULL,
   `description` VARCHAR(1000) NULL,
-  `category_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_products_category_idx` (`category_id` ASC),
-  CONSTRAINT `fk_products_category`
-    FOREIGN KEY (`category_id`)
-    REFERENCES `mydb`.`category` (`id`)
+  `image` VARCHAR(500) NULL,
+  `category_name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`, `category_name`),
+  INDEX `fk_products_category1_idx` (`category_name` ASC),
+  CONSTRAINT `fk_products_category1`
+    FOREIGN KEY (`category_name`)
+    REFERENCES `mydb`.`category` (`name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -46,9 +46,12 @@ DROP TABLE IF EXISTS `mydb`.`customers` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`customers` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `adress` VARCHAR(100) NULL,
+  `first name` VARCHAR(45) NOT NULL,
+  `surname` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
+  `postcode` VARCHAR(45) NULL,
+  `woonplaats` VARCHAR(45) NULL,
+  `adress` VARCHAR(100) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
