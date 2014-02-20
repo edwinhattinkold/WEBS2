@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="bannerID">
-			<a href = "home.php"><img src="images/banner_webshop.jpg" alt="Banner Webshop" /></a>
+			<a href = "home.php"><img src="images/banner.png" alt="Banner Webshop" /></a>
 		</div>
 		<div id="menu">
 			<ul>
