@@ -26,7 +26,7 @@
 						<a href = "home.php"><b>Home</b></a>
 					</td>
 					<td>
-						<a href = "product.php"><b>Product</b></a>
+						<a href = "producten.php"><b>Producten</b></a>
 					</td>
 					<td>
 						<a href = "about.php"><b>About</b></a>

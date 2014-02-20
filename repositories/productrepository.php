@@ -1,7 +1,7 @@
 <?php
 	include 'model/product.php';
 		
-	function getAllCustomers($connection)
+	function getAllProducts($connection)
 	{
 		$query = "SELECT * FROM products";
 		$result =$connection->query($query);
@@ -11,24 +11,33 @@
 		
 		while ($row =$result->fetch_assoc())
 		{
-			$id = $row["id"];
-			$name = $row["name"];
-			$price = $row["price"];
-			$description = $row["description"];
-			$category_id = $row["category_id"];
-			
-			$products[$i] = new Product();
-			$products[$i] -> _set("id",$id);
-			$products[$i] -> _set("name",$name);
-			$products[$i] -> _set("price",$price);
-			$products[$i] -> _set("description",$description);
-			$products[$i] -> _set("category_id",$category_id);
+			$products[$i] = new Story();
+			foreach ($row as $key => $value) {
+				$products[$i] -> _set($key, $value);
+			}
 			
 			$i++;
 		}
 		
 		$result->close();
 		
-		return $students;
+		return $products;
+	}
+	
+	function getProductById($connection, $id)
+	{
+		$query = "SELECT * FROM products WHERE id = '".$id."'";
+		$result =$connection->query($query);
+		
+		$product = new Product();
+		
+		while ($row =$result->fetch_assoc())
+		{
+			foreach ($row as $key => $value) {
+				$product -> _set($key, $value);
+			}
+		}		
+		$result->close();		
+		return $products;
 	}
 ?>

@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-	<div id="submenu_border">
+	
 	<div id = "tekst">
 		<h2>Product</h2>
 	</div>

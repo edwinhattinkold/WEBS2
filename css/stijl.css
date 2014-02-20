@@ -116,6 +116,12 @@ h2
 	background-color: #222222;
 }
 
+#menu td:hover
+{
+	background-color: white;
+	color:	#080703;
+}
+
 #rechter_lijn
 {
 	width:	12%;
