@@ -8,18 +8,29 @@
 	</head>
 	<body>
 		<div id="bannerID">
-			<a href = "home.php"><img src="images/banner.png" alt="Banner Webshop" /></a>
+			<a href="home.php"><table>
+				<tr>
+					<td class="header">
+						<img src="images/banner.png" alt="Banner Webshop" />
+					</td>
+					<td  class="header">
+						GAMESHOP ET
+					</td>
+				</tr>
+			</table></a>
 		</div>
 		<div id="menu">
-			<ul>
-				<li>
-					<a href = "home.php"><b>Home</b></a>
-				</li>
-				<li>
-					<a href = "product.php"><b>Product</b></a>
-				</li>
-				<li>
-					<a href = "about.php"><b>About</b></a>
-				</li>
-			</ul>
+			<table>
+				<tr>
+					<td>
+						<a href = "home.php"><b>Home</b></a>
+					</td>
+					<td>
+						<a href = "product.php"><b>Product</b></a>
+					</td>
+					<td>
+						<a href = "about.php"><b>About</b></a>
+					</td>
+				</tr>
+			</table>
 		</div>

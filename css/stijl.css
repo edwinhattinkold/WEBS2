@@ -25,21 +25,52 @@ h2
 {
 	display:	block;
 	margin:	0 auto;
+	font-family:		ourfont;
+	font-size:		60px;
+}
+
+#bannerID a
+{
+	text-decoration:		none;
+}
+
+#bannerID a:hover
+{
+	color:		white;
+}
+
+#bannerID a:visited
+{
+	color:		white;
+}
+
+.header
+{
+	width: 50%;
 }
 
 #footer
 {
-	position:	fixed;
 	width:	100%;
 	border-top-style:	solid;
 	border-top-width:	2px;
 	bottom:	10px;
 	text-align:	center;
+	font-size: 10px;
+}
+
+#footer a
+{
+	color:		white;
+}
+
+#footer a: visited
+{
+	color:		white;
 }
 
 #menu
 {
-	position:	fixed;
 	text-align:	center;
 	border-bottom-style:	solid;
 	border-top-style:	solid;
@@ -49,11 +80,15 @@ h2
 	color:		white;
 }
 
+#menu a
+{
+	text-decoration:		none;
+}
+
 #menu a:hover
 {
-	text-decoration:	underline;
 	background-color: white;
-	color:	#000044;
+	color:	#080703;
 }
 
 #menu a:visited
@@ -63,22 +98,22 @@ h2
 
 #menu a:visited:hover
 {
-	text-decoration:	underline;
 	background-color: white;
-	color:	#000044;
+	color:	#080703;
 }
 
-#menu ul
+#menu  table
 {
-	margin:	0px;
-	padding:	0px;
+	border:	0px;
+	margin:		auto;
 }
 
-#menu li
+#menu td
 {
-	list-style-type:	none;
-	display:	inline;
-	padding:	2%;
+	padding-left:	20px;
+	padding-right:	20px;
+	font-size:	25px;
+	background-color: #222222;
 }
 
 #rechter_lijn
@@ -95,7 +130,6 @@ h2
 #submenu_border
 {
 	width:	12%;
-	position:	fixed;
 	height:	100%;
 	border-right-style:	solid;
 	border-right-width:	2px;
@@ -105,7 +139,6 @@ h2
 
 #submenu
 {
-	position:	fixed;
 	top:	20%;
 	left:	0.5%;
 }
@@ -123,14 +156,12 @@ h2
 
 #submenu ul a:hover
 {
-	text-decoration:	underline;
 	background-color: white;
 	color:	#000044;
 }
 
 #submenu li a:hover
 {
-	text-decoration:	underline;
 	background-color: white;
 	color:	#000044;
 }
@@ -142,11 +173,7 @@ h2
 
 #tekst
 {
-	position:	fixed;
-	width:	75.6%;
-	height:	73.8%;
-	top:	19.3%;
-	left:	12.2%;
+	margin:		auto;
 	overflow:	auto;
 }
 
