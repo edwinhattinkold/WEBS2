@@ -38,6 +38,6 @@
 			}
 		}		
 		$result->close();		
-		return $products;
+		return $product;
 	}
 ?>
