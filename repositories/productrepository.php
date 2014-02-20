@@ -11,7 +11,7 @@
 		
 		while ($row =$result->fetch_assoc())
 		{
-			$products[$i] = new Story();
+			$products[$i] = new Product();
 			foreach ($row as $key => $value) {
 				$products[$i] -> _set($key, $value);
 			}
