@@ -11,7 +11,7 @@
 			<a href="home.php"><table>
 				<tr>
 					<td class="header">
-						<img src="images/banner.png" alt="Banner Webshop" />
+						<img src="images/banner.png" width="275" height="172" alt="Banner Webshop" />
 					</td>
 					<td  class="header">
 						GAMESHOP ET
