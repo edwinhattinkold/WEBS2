@@ -1,8 +1,6 @@
 <?php include 'header.php'; ?>
 <div id = "tekst">
 	<h2>Home</h2>
-	<br />
-	<br />
 	<p id = "intro_tekst">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Integer aliquam arcu eu tincidunt aliquet. Sed vulputate viverra arcu at consequat. Ut rutrum ullamcorper libero et blandit.
