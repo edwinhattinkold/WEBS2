@@ -5,6 +5,7 @@
 		private $name;
 		private $price;
 		private $description;
+		private $image;
 		private $category_id;
 		
 		public function _get($property) {
