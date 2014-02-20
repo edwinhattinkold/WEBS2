@@ -82,6 +82,7 @@ h2
 #menu a
 {
 	text-decoration:		none;
+	display:	block;
 }
 
 #menu a:hover
@@ -93,12 +94,13 @@ h2
 #menu a:visited
 {
 	color:		white;
+	display:		block;
 }
 
 #menu a:visited:hover
 {
 	background-color: white;
-	color:	#080703;
+	color:	#222222;
 }
 
 #menu  table
@@ -118,57 +120,44 @@ h2
 #menu td:hover
 {
 	background-color: white;
-	color:	#080703;
-}
-
-#rechter_lijn
-{
-	width:	12%;
-	position:	fixed;
-	height:	100%;
-	border-left-style:	solid;
-	border-left-width:	2px;
-	top:	0px;
-	right:	0px;
-}
-
-#submenu_border
-{
-	width:	12%;
-	height:	100%;
-	border-right-style:	solid;
-	border-right-width:	2px;
-	top:	0px;
-	left:	0px;
+	color:	#222222;
 }
 
 #submenu
 {
-	top:	20%;
-	left:	0.5%;
+	font-size:	20px;
+	background-color:	#222222;
 }
 
-#submenu ul
+#submenu td
 {
-	padding:	0px;
+	border:		0px;
+	padding-top:	15px;
+	padding-bottom:	15px;
 }
 
-#submenu li
-{
-	list-style-type:	none;
-	margin-bottom:	5%;
-}
-
-#submenu ul a:hover
+#submenu a:hover
 {
 	background-color: white;
-	color:	#000044;
+	color:	#222222;
 }
 
-#submenu li a:hover
+#submenu a:visited
+{
+	color:		white;
+	display:		block;
+}
+
+#submenu a:visited:hover
 {
 	background-color: white;
-	color:	#000044;
+	color:	#222222;
+}
+
+#submenu td:hover
+{
+	background-color: white;
+	color:	#222222;
 }
 
 .intro_tekst
