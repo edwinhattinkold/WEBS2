@@ -1,5 +1,8 @@
-<?php include 'header.php'; ?>
-<?php include 'printproduct.php'; ?>
+<?php 
+include 'db/connection.php';
+$connection = openDB();
+include 'header.php'; 
+include 'printproduct.php'; ?>
 <table>
 	<tr>
 		<td>
@@ -9,10 +12,13 @@
 			<div id = "tekst">
 				<h2>Product</h2>
 				
-				<?php printproduct("1"); ?>
+				<?php printproduct($connection,"1"); ?>
 				
 			</div>
 		</td>
 	</tr>
 </table>
+<?php
+closeDB($connection);
+?>
 <?php include 'footer.php'; ?>

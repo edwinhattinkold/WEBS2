@@ -1,9 +1,7 @@
 <?php
 include 'repositories/productrepository.php';
-include 'db/connection.php';
-function printproduct($id)
+function printproduct($connection,$id)
 {
-	$connection = openDB();
 	$product = getProductById($connection,$id);
 	
 	$id = $product -> _get("id");
@@ -31,7 +29,7 @@ function printproduct($id)
 	}
 	else
 	{
-	echo "<p>The article you are searching for does not exist.</p>";
+		echo "<p>The article you are searching for does not exist.</p>";
 	}
 }
 ?>

@@ -23,17 +23,25 @@
 			</table></a>
 		</div>
 		<div id="menu">
-			<table>
-				<tr>
-					<td>
-						<a href = "home.php"><b>Home</b></a>
-					</td>
-					<td>
-						<a href = "products.php"><b>Products</b></a>
-					</td>
-					<td>
-						<a href = "about.php"><b>About</b></a>
-					</td>
-				</tr>
-			</table>
+		<table>
+		<tr>
+		<?php
+			include 'repositories/menurepository.php';
+			$menu = getAllMenus($connection);
+			
+			foreach($menu as &$menuitem)
+			{
+				$id = $menuitem -> _get("id");
+				$name = $menuitem -> _get("name");
+				$link = $menuitem -> _get("link");
+				echo "<td><b><a href=\"$link\">";
+				echo $name;
+				echo "</a>";
+				echo "</td></b>";
+			}
+			
+			
+		?>
+		</tr>
+		</table>
 		</div>
