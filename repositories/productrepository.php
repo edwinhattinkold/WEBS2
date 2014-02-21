@@ -20,11 +20,10 @@
 		}
 		
 		$result->close();
-		
 		return $products;
 	}
 	
-	function getProductById($connection, $id)
+	function getProductById($connection,$id)
 	{
 		$query = "SELECT * FROM products WHERE id = '".$id."'";
 		$result =$connection->query($query);
@@ -38,6 +37,6 @@
 			}
 		}		
 		$result->close();		
-		return $product;
+		return $product;		
 	}
 ?>

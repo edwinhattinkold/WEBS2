@@ -1,4 +1,8 @@
-<?php include 'header.php'; ?>
+<?php 
+include 'db/connection.php';
+$connection = openDB();
+include 'header.php'; 
+?>
 <div id = "tekst">
 	<h2>About</h2>
 	<p id = "intro_tekst">
