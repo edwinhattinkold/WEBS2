@@ -46,7 +46,13 @@ h2
 
 .header
 {
-	width: 50%;
+	width: 25%;
+}
+
+.header2
+{
+	width:	50%;
+	text-align:		left;
 }
 
 #footer

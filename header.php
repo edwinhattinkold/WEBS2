@@ -13,8 +13,11 @@
 					<td class="header">
 						<img src="images/banner.png" width="275" height="172" alt="Banner Webshop" />
 					</td>
-					<td  class="header">
+					<td  class="header2">
 						GAMESHOP ET
+					</td>
+					<td class="header">
+						<!-- empty -->
 					</td>
 				</tr>
 			</table></a>
