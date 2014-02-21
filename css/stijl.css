@@ -40,11 +40,15 @@ a:visited
 {
 	height:	187px;
 	width:	100%;
-	display:	block;
 	margin:	0 auto;
 	font-family:		ourfont;
 	font-size:		60px;
 	text-align:	center;
+}
+
+#bannerID a
+{
+display: block;
 }
 
 #footer
@@ -75,11 +79,6 @@ a:visited
 	border-top-width:	2px;
 	width:	100%;
 	color:		white;
-}
-
-#menu a
-{
-	display:	block;
 }
 
 #menu a:hover
@@ -158,7 +157,13 @@ a:visited
 	color:	#222222;
 }
 
-.intro_tekst
+#tekst
+{
+	width:	50%;
+	margin:	auto;
+}
+
+.abouttext
 {
 	text-align:	center;
 }

@@ -5,7 +5,7 @@ include 'header.php';
 ?>
 <div id = "tekst">
 	<h2>Home</h2>
-	<p id = "intro_tekst">
+	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Integer aliquam arcu eu tincidunt aliquet. Sed vulputate viverra arcu at consequat. Ut rutrum ullamcorper libero et blandit.
 		Nullam semper arcu vel ultrices lobortis. Quisque porta enim et faucibus eleifend. Suspendisse nec elit in urna mollis euismod.

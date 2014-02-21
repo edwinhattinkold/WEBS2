@@ -7,12 +7,10 @@
 		</title>
 	</head>
 	<body>
-		<div>
-			<a href="home.php">
-				<div id="bannerID">
+		<div id="bannerID">
+			<a href="index.php">
 					<img src="images/banner.png" width="275" height="172" alt="Banner Webshop" />
 					GAMESHOP ET
-				</div>
 			</a>
 		</div>
 		<div id="menu">
@@ -30,7 +28,7 @@
 				echo "<td><b><a href=\"$link\">";
 				echo $name;
 				echo "</a>";
-				echo "</td></b>";
+				echo "</b></td>";
 			}
 			
 			
