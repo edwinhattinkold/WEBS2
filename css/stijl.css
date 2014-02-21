@@ -6,7 +6,7 @@
 
 body
 {
-	background-color:	#080703;
+	background-color:	black;
 	padding:	0px;
 	margin:	0px;
 	width:	100%;
@@ -21,38 +21,30 @@ h2
 	text-decoration:	underline;
 }
 
-#bannerID
-{
-	display:	block;
-	margin:	0 auto;
-	font-family:		ourfont;
-	font-size:		60px;
-}
-
-#bannerID a
+a
 {
 	text-decoration:		none;
 }
 
-#bannerID a:hover
+ a:hover
 {
 	color:		white;
 }
 
-#bannerID a:visited
+a:visited
 {
 	color:		white;
 }
 
-.header
+#bannerID
 {
-	width: 25%;
-}
-
-.header2
-{
-	width:	50%;
-	text-align:		left;
+	height:	187px;
+	width:	100%;
+	display:	block;
+	margin:	0 auto;
+	font-family:		ourfont;
+	font-size:		60px;
+	text-align:	center;
 }
 
 #footer
@@ -66,6 +58,7 @@ h2
 
 #footer a
 {
+	text-decoration:	underline;
 	color:		white;
 }
 
@@ -76,7 +69,6 @@ h2
 
 #menu
 {
-	text-align:	center;
 	border-bottom-style:	solid;
 	border-top-style:	solid;
 	border-bottom-width:	2px;
@@ -87,14 +79,13 @@ h2
 
 #menu a
 {
-	text-decoration:		none;
 	display:	block;
 }
 
 #menu a:hover
 {
 	background-color: white;
-	color:	#080703;
+	color:	#222222;
 }
 
 #menu a:visited
@@ -169,37 +160,6 @@ h2
 .intro_tekst
 {
 	text-align:	center;
-}
-
-#tekst
-{
-	margin:		auto;
-	overflow:	auto;
-}
-
-#tekst img
-{
-	position:	relative;
-	left:	-42.5%;
-}
-
-#tekst p
-{
-	width:	50%;
-	margin-left:	25%;
-	margin-bottom:	1%;
-}
-
-#tekst ul
-{
-	width:	50%;
-	margin-left:	25%;
-}
-
-#tekst ol
-{
-	width:	50%;
-	margin-left:	25%;
 }
 
 #progressTable, td
