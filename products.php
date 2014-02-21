@@ -12,7 +12,7 @@ include 'printproduct.php'; ?>
 			<div id = "tekst">
 				<h2>Product</h2>
 				
-				<?php printproduct($connection,"1"); ?>
+				<?php printallproducts($connection); ?>
 				
 			</div>
 		</td>
