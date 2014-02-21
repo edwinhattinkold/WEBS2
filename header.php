@@ -7,21 +7,12 @@
 		</title>
 	</head>
 	<body>
-		<div id="bannerID">
-			<a href="home.php"><table>
-				<tr>
-					<td class="header">
-						<img src="images/banner.png" width="275" height="172" alt="Banner Webshop" />
-					</td>
-					<td  class="header2">
-						GAMESHOP ET
-					</td>
-					<td class="header">
-						<!-- empty -->
-					</td>
-				</tr>
-			</table></a>
-		</div>
+		<a href="home.php">
+			<div id="bannerID">
+				<img src="images/banner.png" width="275" height="172" alt="Banner Webshop" />
+				GAMESHOP ET
+			</div>
+		</a>
 		<div id="menu">
 		<table>
 		<tr>
