@@ -22,7 +22,7 @@ include 'header.php';
 			}
 			else
 			{
-				$allowedExts = array("gif", "jpeg", "jpg", "png");
+				$allowedExts = array("gif", "jpeg", "jpg", "png", "PNG","GIF","JPEG","JPG");
 				$temp = explode(".", $_FILES["file"]["name"]);
 				$extension = end($temp);
 				if (in_array($extension,$allowedExts))
