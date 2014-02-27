@@ -1,9 +1,9 @@
 <?php
 	class Category
 	{
-		private $id;
 		private $name;
 		private $description;
+		private $product_ids;
 		
 		public function _get($property) {
 			if (property_exists($this, $property)) {

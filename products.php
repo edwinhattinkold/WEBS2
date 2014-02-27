@@ -10,7 +10,7 @@ include 'printproduct.php'; ?>
 		</td>
 		<td>
 			<div id = "tekst">
-				<h2>Product</h2>
+				<h2>Products</h2>
 				
 				<?php printallproducts($connection); ?>
 				

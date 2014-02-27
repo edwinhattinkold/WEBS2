@@ -1,32 +1,17 @@
 <table id="submenu">
-	<tr>
-		<td>
-		categorie
-		</td>
-	</tr>
-	<tr>
-		<td>
-		categorie
-		</td>
-	</tr>
-	<tr>
-		<td>
-		categorie
-		</td>
-	</tr>
-	<tr>
-		<td>
-		categorie
-		</td>
-	</tr>
-	<tr>
-		<td>
-		categorie
-		</td>
-	</tr>
-	<tr>
-		<td>
-		categorie
-		</td>
-	</tr>
+	<?php
+		include 'repositories/categoryrepository.php';
+		
+		$categories = getAllCategories($connection);
+		
+		foreach($categories as &$category)
+		{
+			$name = $category -> _get("name");
+			$description = $category -> _get("description");
+			
+			echo "<tr>";
+			echo "<td>$name</td>";
+			echo "</tr>";
+		}
+	?>
 </table>
