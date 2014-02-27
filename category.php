@@ -3,25 +3,28 @@ include 'db/connection.php';
 $connection = openDB();
 include 'header.php'; 
 include 'printproduct.php'; ?>
-	<table>
+<table>
 	<tr>
 		<td>
 			<?php include 'submenu.php';?>
 		</td>
 		<td>
-			<div id = "tekst">
-				<?php
-					if (!isset($_GET['productid']))
+			<div id = "tekst">				
+				<?php 
+					if (!isset($_GET['category']))
 					{
 						echo "<p>You entered the page incorrectly, please try again.</p>";
 					}
 					else
 					{
-						printproduct($connection,$_GET['productid']);
+						printproductsincategory($connection,$_GET['category']);
 					}					
 				?>				
 			</div>
 		</td>
 	</tr>
 </table>
+<?php
+closeDB($connection);
+?>
 <?php include 'footer.php'; ?>

@@ -65,4 +65,37 @@ function printallproducts($connection)
 	}
 	echo "</table>";
 }
+
+function printproductsincategory($connection,$category)
+{
+	$products = getProductsInCategory($connection,$category);
+	$counter = 0;
+	echo "<table>";
+	foreach($products as &$product)
+	{
+		if ($counter == 0)
+		{
+			echo "<tr>";
+		}
+		$id = $product -> _get("id");
+		$name = $product -> _get("name");
+		$price = $product -> _get("price");
+		$description = $product -> _get("description");
+		$image = $product -> _get("image");
+		$category_name = $product -> _get("category_name");
+		
+		echo "<td><a href=\"product.php?productid=$id\">$name</a></td>";
+		echo "<td><a href=\"product.php?productid=$id\"><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
+		$counter++;
+		
+		if ($counter == 3)
+		{
+			echo "</tr>
+			";
+			$counter = 0;
+		}
+		echo "";
+	}
+	echo "</table>";
+}
 ?>

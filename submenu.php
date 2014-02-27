@@ -10,7 +10,7 @@
 			$description = $category -> _get("description");
 			
 			echo "<tr>";
-			echo "<td>$name</td>";
+			echo "<td><a href=\"category.php?category=$name\">$name</a></td>";
 			echo "</tr>";
 		}
 	?>

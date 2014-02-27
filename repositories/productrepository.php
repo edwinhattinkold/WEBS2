@@ -39,4 +39,26 @@
 		$result->close();		
 		return $product;		
 	}
+	
+	function getProductsInCategory($connection,$category)
+	{
+		$query = "SELECT * FROM products WHERE category_name = '".$category."'";
+		$result =$connection->query($query);
+		
+		$i = 0;
+		$products = array();
+		
+		while ($row =$result->fetch_assoc())
+		{
+			$products[$i] = new Product();
+			foreach ($row as $key => $value) {
+				$products[$i] -> _set($key, $value);
+			}
+			
+			$i++;
+		}
+		
+		$result->close();
+		return $products;
+	}
 ?>
