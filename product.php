@@ -3,14 +3,12 @@ include 'db/connection.php';
 $connection = openDB();
 include 'header.php'; 
 include 'printproduct.php'; ?>
-	<table>
-	<tr>
-		<td>
+	<div class="row">
+		<div class="span2">
 			<?php include 'submenu.php';?>
-		</td>
-		<td>
-			<div id = "tekst">
-				<?php
+		</div>
+		<div class="span10">
+			<?php
 					if (!isset($_GET['productid']))
 					{
 						echo "<p>You entered the page incorrectly, please try again.</p>";
@@ -19,9 +17,7 @@ include 'printproduct.php'; ?>
 					{
 						printproduct($connection,$_GET['productid']);
 					}					
-				?>				
-			</div>
-		</td>
-	</tr>
-</table>
+				?>	
+		</div>
+	</div>
 <?php include 'footer.php'; ?>

@@ -1,4 +1,5 @@
-<table id="submenu">
+<nav>
+	<ul class="nav nav-pills nav-stacked">
 	<?php
 		include 'repositories/categoryrepository.php';
 		
@@ -9,9 +10,9 @@
 			$name = $category -> _get("name");
 			$description = $category -> _get("description");
 			
-			echo "<tr>";
-			echo "<td><a href=\"category.php?category=$name\">$name</a></td>";
-			echo "</tr>";
+			?>
+			<li><a href="category.php?" category="<?php echo $name ?>"><?php echo $name ?> </a>
+		<?php
 		}
-	?>
-</table>
+		?>
+</nav>

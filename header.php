@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-	<link rel="stylesheet" href="css/stijl.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 		<title>
 			Webshop
 		</title>
@@ -13,26 +13,33 @@
 					GAMESHOP ET
 			</a>
 		</div>
-		<div id="menu">
-		<table>
-		<tr>
-		<?php
-			include 'repositories/menurepository.php';
-			$menu = getAllMenus($connection);
+
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					</button>
+			</div>
 			
-			foreach($menu as &$menuitem)
-			{
-				$id = $menuitem -> _get("id");
-				$name = $menuitem -> _get("name");
-				$link = $menuitem -> _get("link");
-				echo "<td><b><a href=\"$link\">";
-				echo $name;
-				echo "</a>";
-				echo "</b></td>";
-			}
-			
-			
-		?>
-		</tr>
-		</table>
-		</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<?php
+						include 'repositories/menurepository.php';
+						$menu = getAllMenus($connection);
+						
+						foreach($menu as &$menuitem)
+						{
+							$id = $menuitem -> _get("id");
+							$name = $menuitem -> _get("name");
+							$link = $menuitem -> _get("link");
+					?>
+							<li><a href="<?php echo $link?>"><?php echo $name?></a></li>
+					<?php
+						}
+					?>
+			</div>
+		</nav>

@@ -3,21 +3,19 @@ include 'db/connection.php';
 $connection = openDB();
 include 'header.php'; 
 include 'printproduct.php'; ?>
-<table>
-	<tr>
-		<td>
-			<?php include 'submenu.php';?>
-		</td>
-		<td>
-			<div id = "tekst">
-				<h2>Products</h2>
-				
-				<?php printallproducts($connection); ?>
-				
+<div class="row">
+	<div class="span 9">
+		<div class="row">
+			<div class="span2">
+					<?php include 'submenu.php';?>
 			</div>
-		</td>
-	</tr>
-</table>
+			<div class="span7">
+				<h2>Products</h2>
+				<?php printallproducts($connection); ?>
+			</div>
+		</div>
+	</div>
+</div>
 <?php
 closeDB($connection);
 ?>
