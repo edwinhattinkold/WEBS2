@@ -51,8 +51,8 @@ function printallproducts($connection)
 		$image = $product -> _get("image");
 		$category_name = $product -> _get("category_name");
 		
-		echo "<td><a href=\"index.php\">$name</a></td>";
-		echo "<td><a href=\"index.php\"><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
+		echo "<td><a href=\"product.php?productid=$id\">$name</a></td>";
+		echo "<td><a href=\"product.php?productid=$id\"><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
 		$counter++;
 		
 		if ($counter == 3)
