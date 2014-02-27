@@ -25,7 +25,7 @@
 	font-size:		60px;
 	text-align:	center;
 	background-color:	black;
-	color:	white;
+	color: #333333;
 	text-decoration:	none;
 }
 
@@ -36,7 +36,7 @@
 
 #bannerID a:hover, #bannerID a:visited
 {
-	color:	white;
+	color: #333333;
 	text-decoration:	none;
 }
 
@@ -314,7 +314,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 input,
 button,
@@ -359,7 +359,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #ffffff;
+  background-color: #000000;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
