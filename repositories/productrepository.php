@@ -61,4 +61,19 @@
 		$result->close();
 		return $products;
 	}
+	
+	function addProduct($connection,$product)
+	{
+		$name = $product -> _get("name");
+		$description = $product -> _get("description");
+		$price = $product -> _get("price");
+		$image = $product -> _get("image");
+		$category_name = $product -> _get("category_name");
+		
+		$query ="INSERT INTO products (name,description,price,image,category_name) VALUES ('$name','$description','$price','$image','$category_name');";
+		if (!mysqli_query($connection,$query))
+		{
+			die('Error: ' . mysqli_error($connection));
+		}
+	}
 ?>

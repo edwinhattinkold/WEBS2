@@ -6,7 +6,7 @@
 		private $price;
 		private $description;
 		private $image;
-		private $category_id;
+		private $category_name;
 		
 		public function _get($property) {
 			if (property_exists($this, $property)) {
