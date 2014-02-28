@@ -1,3 +1,4 @@
+		</div> <!-- Wrap Div end -->`
 		<div class="containter">
 			<nav class="navbar navbar-inverse navbar-fixed-bottom">
 				<p class="text-muted">
