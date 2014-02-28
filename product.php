@@ -4,10 +4,10 @@ $connection = openDB();
 include 'functions/header.php'; 
 include 'functions/printproduct.php'; ?>
 	<div class="row">
-		<div class="span2">
+		<div class="col-md-2">
 			<?php include 'functions/submenu.php';?>
 		</div>
-		<div class="span10">
+		<div class="col-md-7">
 			<?php
 					if (!isset($_GET['productid']))
 					{

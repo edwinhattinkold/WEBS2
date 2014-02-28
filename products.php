@@ -6,10 +6,10 @@ include 'functions/printproduct.php'; ?>
 <div class="row">
 	<div class="span 9">
 		<div class="row">
-			<div class="span2">
+			<div class="col-md-2">
 					<?php include 'functions/submenu.php';?>
 			</div>
-			<div class="span7">
+			<div class="col-md-7">
 				<h2>Products</h2>
 				<?php 
 					if (!isset($_GET['category']))
