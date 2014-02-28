@@ -13,7 +13,7 @@ function printproduct($connection,$id)
 	
 	if ($id != null)
 	{
-		echo "<table class=\"product\">";
+		echo "<table class='table'>";
 		echo "<tr>";
 		echo "<th>$name</th>";
 		echo "</tr><tr>";
@@ -48,7 +48,7 @@ function printproducts($connection,$category)
 		$products = getAllProducts($connection);
 	}
 	$counter = 0;
-	echo "<table>";
+	echo "<table class='table text-center'>";
 	foreach($products as &$product)
 	{
 		if ($counter == 0)

@@ -4,12 +4,12 @@ $connection = openDB();
 include 'functions/header.php'; 
 include 'functions/printproduct.php'; ?>
 <div class="row">
-	<div class="span 9">
+	<div class="col-md-12">
 		<div class="row">
 			<div class="col-md-2">
 					<?php include 'functions/submenu.php';?>
 			</div>
-			<div class="col-md-7">
+			<div class="col-md-9">
 				<h2>Products</h2>
 				<?php 
 					if (!isset($_GET['category']))
