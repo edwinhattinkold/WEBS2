@@ -86,8 +86,8 @@ function printproductsincategory($connection,$category)
 			$image = $product -> _get("image");
 			$category_name = $product -> _get("category_name");
 			
-			echo "<a href=\"product.php?productid=$id\"><td>$name</td>";
-			echo "<td><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
+			echo "<td><a href=\"product.php?productid=$id\">$name</a></td>";
+			echo "<td><a href=\"product.php?productid=$id\"><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
 			$counter++;
 			
 			if ($counter == 3)

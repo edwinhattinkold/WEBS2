@@ -2,9 +2,10 @@
 include 'db/connection.php';
 $connection = openDB();
 include 'functions/header.php';
-include 'repositories/categoryrepository.php';?>
+include 'repositories/categoryrepository.php';
+?>
 	<div class="row">
-		<form enctype="multipart/form-data" action="functions/addproduct.php" method="POST">
+		<form enctype="multipart/form-data" action="addproduct.php" method="POST">
 			Product name: <input type="text" name="name"/><br/>
 			<select name="category">
 				<option value="">Select...</option>

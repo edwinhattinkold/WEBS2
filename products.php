@@ -11,7 +11,16 @@ include 'functions/printproduct.php'; ?>
 			</div>
 			<div class="span7">
 				<h2>Products</h2>
-				<?php printallproducts($connection); ?>
+				<?php 
+					if (!isset($_GET['category']))
+					{
+						printallproducts($connection);
+					}
+					else
+					{
+						printproductsincategory($connection,$_GET['category']);
+					}					
+				?>	
 			</div>
 		</div>
 	</div>

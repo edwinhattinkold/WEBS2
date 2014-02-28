@@ -75,5 +75,7 @@
 		{
 			die('Error: ' . mysqli_error($connection));
 		}
+		$id = mysqli_insert_id($connection);
+		return $id;
 	}
 ?>
