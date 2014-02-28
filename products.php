@@ -14,11 +14,11 @@ include 'functions/printproduct.php'; ?>
 				<?php 
 					if (!isset($_GET['category']))
 					{
-						printallproducts($connection);
+						printproducts($connection,"");
 					}
 					else
 					{
-						printproductsincategory($connection,$_GET['category']);
+						printproducts($connection,$_GET['category']);
 					}					
 				?>	
 			</div>
