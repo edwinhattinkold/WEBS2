@@ -40,12 +40,6 @@
 	text-decoration:	none;
 }
 
-#footer
-{
-	height: 60px;
-	background-color: #000000;
-}
-
 /*
 * Bootstrap CSS
 */
@@ -3680,6 +3674,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+
 .navbar {
   position: relative;
   min-height: 50px;
@@ -3761,7 +3756,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   right: 0;
   left: 0;
   z-index: 1030;
+  text-align: center;
 }
+
 @media (min-width: 768px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
