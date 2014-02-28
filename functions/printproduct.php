@@ -23,7 +23,7 @@ function printproduct($connection,$id)
 		echo "</tr><tr>";
 		echo "<td>$description</td>";
 		echo "</tr><tr>";
-		echo "<td><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></td>";
+		echo "<td><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/ class='thumbnail'></td>";
 		echo "</tr>";
 		echo "</table>";
 	}
@@ -63,7 +63,7 @@ function printproducts($connection,$category)
 		$category_name = $product -> _get("category_name");
 		
 		echo "<td><a href=\"product.php?productid=$id\">$name</a></td>";
-		echo "<td><a href=\"product.php?productid=$id\"><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
+		echo "<td><a href=\"product.php?productid=$id\" class='thumbnail'><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
 		$counter++;
 		
 		if ($counter == 3)

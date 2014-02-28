@@ -3692,6 +3692,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-collapse {
+  font-size: large;
+  font-weight: bold;
   max-height: 340px;
   overflow-x: visible;
   padding-right: 15px;

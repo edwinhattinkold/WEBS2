@@ -24,23 +24,25 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 						</button>
-				</div>
+					</div>
 				
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<?php
-							include 'repositories/menurepository.php';
-							$menu = getAllUserMenus($connection);
-							
-							foreach($menu as &$menuitem)
-							{
-								$id = $menuitem -> _get("id");
-								$name = $menuitem -> _get("name");
-								$link = $menuitem -> _get("link");
-						?>
-								<li><a href="<?php echo $link?>"><?php echo $name?></a></li>
-						<?php
-							}
-						?>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<?php
+								include 'repositories/menurepository.php';
+								$menu = getAllUserMenus($connection);
+								
+								foreach($menu as &$menuitem)
+								{
+									$id = $menuitem -> _get("id");
+									$name = $menuitem -> _get("name");
+									$link = $menuitem -> _get("link");
+							?>
+									<li><a href="<?php echo $link?>"><?php echo $name?></a></li>
+							<?php
+								}
+							?>
+						</ul>
+					</div>
 				</div>
 			</nav>
