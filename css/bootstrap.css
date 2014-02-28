@@ -40,6 +40,12 @@
 	text-decoration:	none;
 }
 
+#footer
+{
+	height: 60px;
+	background-color: #000000;
+}
+
 /*
 * Bootstrap CSS
 */
