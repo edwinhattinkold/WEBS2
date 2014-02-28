@@ -24,7 +24,4 @@ include 'printproduct.php'; ?>
 		</td>
 	</tr>
 </table>
-<?php
-closeDB($connection);
-?>
 <?php include 'footer.php'; ?>
