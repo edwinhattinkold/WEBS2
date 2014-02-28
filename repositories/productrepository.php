@@ -25,8 +25,14 @@
 	
 	function getProductById($connection,$id)
 	{
-		$query = "SELECT * FROM products WHERE id = '".$id."'";
-		$result =$connection->query($query);
+		$query = "SELECT * FROM products WHERE id = ?";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('i',$id);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$result = $stmt->get_result();
 		
 		$product = new Product();
 		
@@ -42,8 +48,14 @@
 	
 	function getProductsInCategory($connection,$category)
 	{
-		$query = "SELECT * FROM products WHERE category_name = '".$category."'";
-		$result =$connection->query($query);
+		$query = "SELECT * FROM products WHERE category_name = ?";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('s',$category);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$result = $stmt->get_result();
 		
 		$i = 0;
 		$products = array();
@@ -70,10 +82,12 @@
 		$image = $product -> _get("image");
 		$category_name = $product -> _get("category_name");
 		
-		$query ="INSERT INTO products (name,description,price,image,category_name) VALUES ('$name','$description','$price','$image','$category_name');";
-		if (!mysqli_query($connection,$query))
+		$query ="INSERT INTO products (name,description,price,image,category_name) VALUES (?,?,?,?,?);";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('ssiss',$name,$description,$price,$image,$category_name);
+		if (!$stmt->execute()) 
 		{
-			die('Error: ' . mysqli_error($connection));
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 		}
 		$id = mysqli_insert_id($connection);
 		return $id;

@@ -37,7 +37,13 @@
 	function getCategoryByName($connection,$name)
 	{
 		$query = "SELECT * FROM category WHERE name = '".$name."'";
-		$result =$connection->query($query);
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('s',$name);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$result = $stmt->get_result();
 		
 		$category = new Category();
 		

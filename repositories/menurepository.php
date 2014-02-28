@@ -23,21 +23,4 @@
 		
 		return $menus;
 	}
-	
-	function getMenuById($connection, $id)
-	{
-		$query = "SELECT * FROM menus WHERE id = '".$id."'";
-		$result =$connection->query($query);
-		
-		$menu = new Menu();
-		
-		while ($row =$result->fetch_assoc())
-		{
-			foreach ($row as $key => $value) {
-				$menu -> _set($key, $value);
-			}
-		}		
-		$result->close();		
-		return $menu;
-	}
 ?>
