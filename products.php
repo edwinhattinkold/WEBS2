@@ -16,7 +16,4 @@ include 'printproduct.php'; ?>
 		</div>
 	</div>
 </div>
-<?php
-closeDB($connection);
-?>
 <?php include 'footer.php'; ?>
