@@ -29,7 +29,7 @@
 				<ul class="nav navbar-nav">
 					<?php
 						include 'repositories/menurepository.php';
-						$menu = getAllMenus($connection);
+						$menu = getAllUserMenus($connection);
 						
 						foreach($menu as &$menuitem)
 						{

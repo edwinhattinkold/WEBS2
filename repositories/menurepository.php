@@ -1,9 +1,9 @@
 <?php
 	include 'model/menu.php';
 		
-	function getAllMenus($connection)
+	function getAllUserMenus($connection)
 	{
-		$query = "SELECT * FROM menu";
+		$query = "SELECT * FROM menu WHERE menu_name= 'user'";
 		$result =$connection->query($query);
 		
 		$i = 0;
