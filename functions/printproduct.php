@@ -23,7 +23,16 @@ function printproduct($connection,$id)
 		echo "</tr><tr>";
 		echo "<td>$description</td>";
 		echo "</tr><tr>";
-		echo "<td><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/ class='thumbnail'></td>";
+		echo "<td>";
+		if ($image != null)
+		{
+			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/ class='thumbnail'>";
+		}
+		else
+		{
+			echo "Image not available yet.";
+		}
+		echo "</td>";
 		echo "</tr>";
 		echo "</table>";
 	}
@@ -63,7 +72,15 @@ function printproducts($connection,$category)
 		$category_name = $product -> _get("category_name");
 		
 		echo "<td><a href=\"product.php?productid=$id\">$name</a></td>";
-		echo "<td><a href=\"product.php?productid=$id\" class='thumbnail'><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
+		echo "<td><a href=\"product.php?productid=$id\" class='thumbnail'>";
+		if ($image != null)
+		{
+			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
+		}
+		else
+		{
+			echo "Image not available yet.";
+		}
 		$counter++;
 		
 		if ($counter == 3)
