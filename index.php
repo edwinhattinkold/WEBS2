@@ -1,7 +1,7 @@
 <?php 
 include 'db/connection.php';
 $connection = openDB();
-include 'header.php'; 
+include 'functions/header.php'; 
 ?>
 <div class="row">
 	<div class="span6 offset3">
@@ -14,4 +14,4 @@ include 'header.php';
 		</p>
 	</div>
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'functions/footer.php'; ?>

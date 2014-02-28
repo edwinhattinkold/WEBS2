@@ -1,7 +1,7 @@
 <?php 
 include 'db/connection.php';
 $connection = openDB();
-include 'header.php'; 
+include 'functions/header.php'; 
 ?>
 <div id = "tekst">
 	<h2>About</h2>
@@ -14,4 +14,4 @@ include 'header.php';
 		Thim Heider - groep 42IN07SOl
 	</p>
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'functions/footer.php'; ?>

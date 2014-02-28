@@ -1,12 +1,12 @@
 <?php 
 include 'db/connection.php';
 $connection = openDB();
-include 'header.php'; 
-include 'printproduct.php'; ?>
+include 'functions/header.php'; 
+include 'functions/printproduct.php'; ?>
 <table>
 	<tr>
 		<td>
-			<?php include 'submenu.php';?>
+			<?php include 'functions/submenu.php';?>
 		</td>
 		<td>
 			<div id = "tekst">				
@@ -24,4 +24,4 @@ include 'printproduct.php'; ?>
 		</td>
 	</tr>
 </table>
-<?php include 'footer.php'; ?>
+<?php include 'functions/footer.php'; ?>

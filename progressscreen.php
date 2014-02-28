@@ -1,7 +1,7 @@
 <?php 
 include 'db/connection.php';
 $connection = openDB();
-include 'header.php'; 
+include 'functions/header.php'; 
 ?>
 		<h2>Progress</h2>
 		<p>
@@ -26,4 +26,4 @@ include 'header.php';
 				?>
 			</table>
 		</p>
-<?php include 'footer.php'; ?>
+<?php include 'functions/footer.php'; ?>

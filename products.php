@@ -1,13 +1,13 @@
 <?php 
 include 'db/connection.php';
 $connection = openDB();
-include 'header.php'; 
-include 'printproduct.php'; ?>
+include 'functions/header.php'; 
+include 'functions/printproduct.php'; ?>
 <div class="row">
 	<div class="span 9">
 		<div class="row">
 			<div class="span2">
-					<?php include 'submenu.php';?>
+					<?php include 'functions/submenu.php';?>
 			</div>
 			<div class="span7">
 				<h2>Products</h2>
@@ -16,4 +16,4 @@ include 'printproduct.php'; ?>
 		</div>
 	</div>
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'functions/footer.php'; ?>
