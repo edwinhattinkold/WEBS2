@@ -90,6 +90,7 @@
 			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 		}
 		$id = mysqli_insert_id($connection);
+		$stmt -> close();
 		return $id;
 	}
 ?>
