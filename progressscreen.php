@@ -3,6 +3,8 @@ include 'db/connection.php';
 $connection = openDB();
 include 'functions/header.php'; 
 ?>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
 		<h2>Progress</h2>
 		<p>
 			<table>
@@ -26,4 +28,6 @@ include 'functions/header.php';
 				?>
 			</table>
 		</p>
+	</div>
+</div>
 <?php include 'functions/footer.php'; ?>

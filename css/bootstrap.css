@@ -221,7 +221,7 @@ table {
 }
 td,
 th {
-  padding: 0;
+  width: 70%;
 }
 @media print {
   * {
