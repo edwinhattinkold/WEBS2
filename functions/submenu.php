@@ -11,7 +11,7 @@
 			$description = $category -> _get("description");
 			
 			?>
-			<li><a href="index.php?page=products&category=<?php echo $name ?>" category="<?php echo $name ?>"><?php echo $name ?> </a>
+			<li><a href="index.php?page=products&category=<?php echo $name ?>"><?php echo $name ?> </a></li>
 		<?php
 		}
 		?>

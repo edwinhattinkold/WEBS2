@@ -71,8 +71,8 @@ function printproducts($connection,$category)
 		$image = $product -> _get("image");
 		$category_name = $product -> _get("category_name");
 		
-		echo "<td><a href=\"index.php?page=product&productid=$id\">$name</a></td>\n";
-		echo "<td><a href=\"index.php?page=product&productid=$id\" class='thumbnail'>\n";
+		echo "<td><a href=\"index.php?page=product&amp;productid=$id\">$name</a></td>\n";
+		echo "<td><a href=\"index.php?page=product&amp;productid=$id\" class='thumbnail'>\n";
 		if ($image != null)
 		{
 			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/>";
