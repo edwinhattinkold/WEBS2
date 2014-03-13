@@ -75,12 +75,13 @@ function printproducts($connection,$category)
 		echo "<td><a href=\"index.php?page=product&productid=$id\" class='thumbnail'>";
 		if ($image != null)
 		{
-			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";
+			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/>";
 		}
 		else
 		{
 			echo "Image not available yet.";
 		}
+		echo "</a></td>";
 		$counter++;
 		
 		if ($counter == 3)
