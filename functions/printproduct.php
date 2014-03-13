@@ -15,7 +15,7 @@ function printproduct($connection,$id)
 	{
 		echo "<table class='table'>";
 		echo "<tr>";
-		echo "<th>$name</th>";
+		echo "<th><h1>$name</h1></th>";
 		echo "</tr><tr>";
 		echo "<td>Article number: $id</td>";
 		echo "</tr><tr>";
