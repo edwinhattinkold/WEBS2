@@ -1,5 +1,5 @@
 <?php
-	include 'model/menu.php';
+	include_once 'model/menu.php';
 		
 	function getAllUserMenus($connection)
 	{

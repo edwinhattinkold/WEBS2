@@ -1,5 +1,5 @@
 <?php
-	include 'model/progress.php';
+	include_once 'model/progress.php';
 		
 	function getAllProgress($connection)
 	{

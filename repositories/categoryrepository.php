@@ -1,5 +1,5 @@
 <?php
-	include 'model/category.php';
+	include_once 'model/category.php';
 		
 	function getAllCategories($connection)
 	{

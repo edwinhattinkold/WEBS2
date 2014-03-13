@@ -13,4 +13,3 @@
 		</div>
 	</body>
 </html>
-<?php closeDB($connection); ?>

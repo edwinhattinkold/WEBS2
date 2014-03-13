@@ -1,8 +1,3 @@
-<?php 
-include 'db/connection.php';
-$connection = openDB();
-include 'functions/header.php'; 
-?>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<h2>Progress</h2>
@@ -17,7 +12,7 @@ include 'functions/header.php';
 					</th>
 				</tr>
 				<?php
-					include 'repositories/progressrepository.php';
+					include_once 'repositories/progressrepository.php';
 					$progress = getAllProgress($connection);
 					foreach($progress as &$progressitem)
 					{
@@ -30,4 +25,3 @@ include 'functions/header.php';
 		</p>
 	</div>
 </div>
-<?php include 'functions/footer.php'; ?>

@@ -1,5 +1,5 @@
 <?php
-include 'repositories/productrepository.php';
+include_once 'repositories/productrepository.php';
 function printproduct($connection,$id)
 {
 	$product = getProductById($connection,$id);
@@ -71,8 +71,8 @@ function printproducts($connection,$category)
 		$image = $product -> _get("image");
 		$category_name = $product -> _get("category_name");
 		
-		echo "<td><a href=\"product.php?productid=$id\">$name</a></td>";
-		echo "<td><a href=\"product.php?productid=$id\" class='thumbnail'>";
+		echo "<td><a href=\"index.php?page=product&productid=$id\">$name</a></td>";
+		echo "<td><a href=\"index.php?page=product&productid=$id\" class='thumbnail'>";
 		if ($image != null)
 		{
 			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/></a></td>";

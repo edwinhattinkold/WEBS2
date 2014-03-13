@@ -1,8 +1,3 @@
-<?php 
-include 'db/connection.php';
-$connection = openDB();
-include 'functions/header.php'; 
-?>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<h2>About</h2>
@@ -12,4 +7,3 @@ include 'functions/header.php';
 		Thim Heider - groep 42IN07SOl
 	</div>
 </div>
-<?php include 'functions/footer.php'; ?>

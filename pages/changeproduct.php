@@ -1,9 +1,6 @@
 <?php 
-include 'db/connection.php';
-$connection = openDB();
-include 'functions/header.php';
-include 'repositories/categoryrepository.php';
-include 'repositories/productrepository.php';
+include_once 'repositories/categoryrepository.php';
+include_once 'repositories/productrepository.php';
 if (!isset($_GET['productid']))
 {
 	echo "You entered the page incorrectly, please try again";
@@ -31,7 +28,7 @@ else
 		$category_name = $product -> _get("category_name");
 ?>
 		<div class="row">
-			<form enctype="multipart/form-data" action="updateproduct.php" method="POST">
+			<form enctype="multipart/form-data" action="index.php?page=updateproduct" method="POST">
 				Product number: <?php echo $id ?><input type="hidden" name="id" value="<?php echo $id ?>"><br/>
 				Product name: <input type="text" name="name" value="<?php echo $name ?>"/><br/>
 				<select name="category">
@@ -60,4 +57,4 @@ else
 <?php
 	}
 }
- include 'functions/footer.php'; ?>
+?>
