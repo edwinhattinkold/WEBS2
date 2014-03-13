@@ -93,4 +93,23 @@
 		$stmt -> close();
 		return $id;
 	}
+	
+	function updateProduct($connection,$product)
+	{
+		$id = $product -> _get("id");
+		$name = $product -> _get("name");
+		$description = $product -> _get("description");
+		$price = $product -> _get("price");
+		$image = $product -> _get("image");
+		$category_name = $product -> _get("category_name");
+		
+		$query ="UPDATE products SET name=?, description=?, price=?, image=?, category_name=? WHERE id=?;";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('ssissi',$name,$description,$price,$image,$category_name,$id);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$stmt -> close();
+	}
 ?>

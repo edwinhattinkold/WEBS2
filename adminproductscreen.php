@@ -19,7 +19,7 @@ include 'repositories/categoryrepository.php';
 					}
 					?>
 			</select><br/>
-			Description: <input type="text" name="description"/><br/>
+			Description: <textarea name="description"/></textarea><br/>
 			Price: <input type="number" name="price"/><br/>
 			Image: <input type="file" name="file" id="file"/><br/>
 			<input type="submit" name="send" value="Add Product"/>
