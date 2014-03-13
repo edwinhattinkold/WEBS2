@@ -14,7 +14,7 @@ include 'functions/header.php';
 			
 			if ($_FILES["file"]["error"] > 0)
 			{
-				echo "Error: " . $_FILES["file"]["error"] . "<br/>";
+				echo "No image found, the product will be added without image. You can update this in the change product screen.";
 			}
 			else
 			{
