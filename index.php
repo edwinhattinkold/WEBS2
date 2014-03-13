@@ -4,9 +4,8 @@ $connection = openDB();
 include 'functions/header.php'; 
 ?>
 <div class="row">
-	<div class="span6 offset3">
-		<?php
-		?>
-	</div>
+<?php
+	
+?>
 </div>
 <?php include 'functions/footer.php'; ?>
