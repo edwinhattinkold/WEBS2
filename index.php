@@ -4,7 +4,7 @@ $connection = openDB();
 include 'functions/header.php'; 
 ?>
 <div class="row">
-	<div class="span6 offset3">
+	<div class="col-md-8 col-md-offset-2">
 		<h2>Home</h2>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
