@@ -8,7 +8,7 @@ include_once 'functions/printproduct.php';
 					<?php include 'functions/submenu.php';?>
 			</div>
 			<div class="col-md-9">
-				<h2 class="text-center"><u>Products</u></h2>
+				<h2 class="text-center">Products</h2>
 				<?php 
 					if (!isset($_GET['category']))
 					{
