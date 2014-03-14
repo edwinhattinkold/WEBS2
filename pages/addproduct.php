@@ -1,7 +1,8 @@
-<div class="row">
-	<?php
-		include_once 'functions/printproduct.php';		
-		$product = new Product();
+<?php
+	include_once 'functions/printproduct.php';		
+	$product = new Product();
+	if (isset($_POST["name"]))
+	{
 		$product -> _set("name",$_POST["name"]);
 		$product -> _set("description",$_POST["description"]);
 		$product -> _set("price",$_POST["price"]);
@@ -35,5 +36,10 @@
 		}			
 		$id = addProduct($connection,$product);
 		printProduct($connection,$id);
-	?>		
-</div>
+	}
+	else
+	{
+		echo "Error 404. <br/>";
+		echo "The page you tried to access can not be found.";
+	}
+?>		
