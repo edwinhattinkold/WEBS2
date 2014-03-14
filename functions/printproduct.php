@@ -57,7 +57,7 @@ function printproducts($connection,$category)
 		$products = getAllProducts($connection);
 	}
 	$counter = 0;
-	echo "<table class='table text-center'>";
+	echo "<table>";
 	foreach($products as &$product)
 	{
 		if ($counter == 0)
@@ -72,7 +72,7 @@ function printproducts($connection,$category)
 		$category_name = $product -> _get("category_name");
 		
 		echo "<td><a href=\"index.php?page=product&amp;productid=$id\">$name</a></td>\n";
-		echo "<td><a href=\"index.php?page=product&amp;productid=$id\" class='thumbnail'>\n";
+		echo "<td><a href=\"index.php?page=product&amp;productid=$id\">\n";
 		if ($image != null)
 		{
 			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/>";

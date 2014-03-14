@@ -2,8 +2,9 @@
 include_once 'db/connection.php';
 $connection = openDB();
 include 'functions/header.php'; 
+session_start();
 ?>
-<div class="row">
+<div>
 <?php
 if (isset($_GET['page']))
 {

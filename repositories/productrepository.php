@@ -66,7 +66,6 @@
 			foreach ($row as $key => $value) {
 				$products[$i] -> _set($key, $value);
 			}
-			
 			$i++;
 		}
 		

@@ -1,6 +1,6 @@
-		</div> <!-- Wrap Div end -->`
+		</div> <!-- Wrap Div end -->
 		<div class="containter">
-			<nav class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="navbar navbar-inverse navbar-fixed-bottom">
 				<p class="text-muted">
 					&copy; All rights reserved.
 					<!--
@@ -9,7 +9,7 @@
 					en is <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS 3</a> validated.
 					-->
 				</p>
-			</nav>
+			</div>
 		</div>
 	</body>
 </html>
