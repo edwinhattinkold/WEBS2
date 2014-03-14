@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-		<h2><u>Progress</u></h2>
+		<h2>Progress</h2>
 		<p>
 			<table>
 				<tr>
