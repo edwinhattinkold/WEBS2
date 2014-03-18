@@ -1,60 +1,41 @@
-<?php 
-include_once 'repositories/categoryrepository.php';
-include_once 'repositories/productrepository.php';
-if (!isset($_GET['productid']))
-{
-	echo "You entered the page incorrectly, please try again";
-}
-else
-{
-	$product = getProductById($connection,$_GET['productid']);
-	$id = $product -> _get("id");
-	$name = $product -> _get("name");
-	$description = $product -> _get("description");
-	$price = $product -> _get("price");
-	$image = $product -> _get("image");
-	$category_name = $product -> _get("category_name");
-	if (!isset($id))
-	{
-		echo "This product doesn't exist.";
-	}
-	else
-	{
-		$id = $product -> _get("id");
-		$name = $product -> _get("name");
-		$description = $product -> _get("description");
-		$price = $product -> _get("price");
-		$image = $product -> _get("image");
-		$category_name = $product -> _get("category_name");
-?>
-		<div class="row">
-			<form enctype="multipart/form-data" action="index.php?page=updateproduct" method="POST">
-				Product number: <?php echo $id ?><input type="hidden" name="id" value="<?php echo $id ?>"><br/>
-				Product name: <input type="text" name="name" value="<?php echo $name ?>"/><br/>
-				<select name="category">
-					<option value="<?php echo $category_name?>"><?php echo $category_name?></option>
-					<?php
-						$categories = getAllCategories($connection);
-					
-						foreach($categories as &$category)
-						{
-							$cname = $category -> _get("name");
-							if ($cname != $category_name)
-							{
-								echo "<option value=\"$cname\">$cname</option>";
-							}
-						}
-						?>
-				</select><br/>
-				Description: <textarea name="description"/><?php echo $description?></textarea><br/>
-				Price: <input type="number" name="price" value="<?php echo $price ?>"/><br/>
-				Current image: <img src="<?php echo $image ?>" height="300" width ="200" alt="<?php echo $name ?>"/><br/>
-				Image: <input type="file" name="file" id="file"/><br/>
-				<input type="hidden" name="hiddenimage" value="<?php echo $image ?>"/>
-				<input type="submit" name="send" value="Change product"/>
-			</form>
-		</div>			
-<?php
-	}
-}
-?>
+<div class="row">
+	<?php
+		include_once 'functions/printproduct.php';		
+		$product = new Product();
+		$product -> _set("id",$_POST["id"]);
+		$product -> _set("name",$_POST["name"]);
+		$product -> _set("description",$_POST["description"]);
+		$product -> _set("price",$_POST["price"]);
+		$product -> _set("category_name",$_POST["category"]);
+		if ($_FILES["file"]["error"] > 0)
+		{
+			echo "No image found, the old image stays.<br/>";
+			$product -> _set("image",$_POST["hiddenimage"]);
+		}
+		else
+		{
+			$allowedExts = array("gif", "jpeg", "jpg", "png", "PNG","GIF","JPEG","JPG");
+			$temp = explode(".", $_FILES["file"]["name"]);
+			$extension = end($temp);
+			if (in_array($extension,$allowedExts))
+			{
+				if (file_exists("images/" . $_FILES["file"]["name"]))
+				{
+					echo $_FILES["file"]["name"] . " already exists. ";
+				}
+				else
+				{
+					move_uploaded_file($_FILES["file"]["tmp_name"],"images/" . $_FILES["file"]["name"]);
+				}
+				$product -> _set("image","images/".$_FILES["file"]["name"]);
+			}
+			else
+			{
+				echo "The file you uploaded is wrong, we keep the old image."; 
+				$product -> _set("image",$_POST["hiddenimage"]);
+			}
+		}
+		updateProduct($connection,$product);
+		printproduct($connection,$product -> _get("id"));
+	?>		
+</div>

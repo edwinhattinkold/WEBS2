@@ -1,8 +1,8 @@
 <?php 
+session_start();
 include_once 'db/connection.php';
 $connection = openDB();
 include 'functions/header.php'; 
-session_start();
 ?>
 <div>
 <?php
