@@ -74,13 +74,13 @@ function printproducts($connection,$category)
 			echo "<p><a href=\"index.php?page=product&amp;productid=$id\">\n";
 			if ($image != null)
 			{
-				echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/>";
+				echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/>\n";
 			}
 			else
 			{
-				echo "Image not available yet.";
+				echo "Image not available yet.\n";
 			}
-			echo "</a></p>";
+			echo "</a></p>\n";
 			echo "<h2><a href=\"index.php?page=product&amp;productid=$id\">$name</a></h2>\n";
 		echo "</div>";
 		$counter++;
