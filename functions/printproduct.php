@@ -56,14 +56,9 @@ function printproducts($connection,$category)
 	{
 		$products = getAllProducts($connection);
 	}
-	$counter = 0;
-	echo "<table>";
+	//echo "<div class=\"row\">";
 	foreach($products as &$product)
 	{
-		if ($counter == 0)
-		{
-			echo "<tr>";
-		}
 		$id = $product -> _get("id");
 		$name = $product -> _get("name");
 		$price = $product -> _get("price");
@@ -71,26 +66,20 @@ function printproducts($connection,$category)
 		$image = $product -> _get("image");
 		$category_name = $product -> _get("category_name");
 		
-		echo "<td><a href=\"index.php?page=product&amp;productid=$id\">$name</a></td>\n";
-		echo "<td><a href=\"index.php?page=product&amp;productid=$id\">\n";
-		if ($image != null)
-		{
-			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/>";
-		}
-		else
-		{
-			echo "Image not available yet.";
-		}
-		echo "</a></td>";
-		$counter++;
-		
-		if ($counter == 3)
-		{
-			echo "</tr>\n";
-			$counter = 0;
-		}
-		echo "";
+		//echo "<div class\"col-md-2\">";
+			echo "<h2><a href=\"index.php?page=product&amp;productid=$id\">$name</a></h2>\n";
+			echo "<p><a href=\"index.php?page=product&amp;productid=$id\">\n";
+			if ($image != null)
+			{
+				echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/>";
+			}
+			else
+			{
+				echo "Image not available yet.";
+			}
+			echo "</a></p>";
+		//echo "</div>";
 	}
-	echo "</table>";
+	//echo "</div>";
 }
 ?>
