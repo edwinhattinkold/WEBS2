@@ -1,5 +1,6 @@
 <?php
-	include_once 'functions/printproduct.php';		
+	include_once 'functions/printproduct.php';	
+	include_once 'functions/addimage.php';
 	$product = new Product();
 	if (isset($_POST["name"]))
 	{
@@ -14,26 +15,9 @@
 		}
 		else
 		{
-			$allowedExts = array("gif", "jpeg", "jpg", "png", "PNG","GIF","JPEG","JPG");
-			$temp = explode(".", $_FILES["file"]["name"]);
-			$extension = end($temp);
-			if (in_array($extension,$allowedExts))
-			{
-				if (file_exists("images/" . $_FILES["file"]["name"]))
-				{
-					echo $_FILES["file"]["name"] . " already exists. ";
-				}
-				else
-				{
-					move_uploaded_file($_FILES["file"]["tmp_name"],"images/" . $_FILES["file"]["name"]);
-				}
-				$product -> _set("image","images/".$_FILES["file"]["name"]);
-			}
-			else
-			{
-				echo "The file you uploaded is wrong."; 
-			}
-		}			
+			$product -> _set("image",addImage($_FILES["file"]["name"],$_FILES["file"]["tmp_name"]));
+		}		
+		
 		$id = addProduct($connection,$product);
 		printProduct($connection,$id);
 	}
