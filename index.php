@@ -4,7 +4,6 @@ include_once 'db/connection.php';
 $connection = openDB();
 include 'functions/header.php'; 
 ?>
-<div>
 <?php
 if (isset($_GET['page']))
 {
@@ -22,6 +21,5 @@ else
 	include("pages/home.php");
 }	
 ?>
-</div>
 <?php include 'functions/footer.php'; 
 closeDB($connection);?>

@@ -1,4 +1,4 @@
-		<div class="containter">
+		<div class="container">
 			<div class="navbar navbar-inverse navbar-fixed-bottom">
 				<p class="text-muted">
 					&copy; All rights reserved.
