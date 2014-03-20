@@ -9,7 +9,7 @@ function printproduct($connection,$id)
 	$price = $product -> _get("price");
 	$description = $product -> _get("description");
 	$image = $product -> _get("image");
-	$category_name = $product -> _get("category_name");
+	$category = $product -> _get("category");
 	
 	if ($id != null)
 	{
@@ -42,6 +42,30 @@ function printproduct($connection,$id)
 	}
 }
 
+function printadminproducts($connection)
+{
+	
+	$products = getAllProducts($connection);
+	echo "<table class='table table-bordered'>";
+	echo "<tr><th>Product ID</th><th>Produce name</th><th>Price</th><th>Category</th><th></th><th></th></tr>";
+	foreach($products as &$product)
+	{
+		$id = $product -> _get("id");
+		$name = $product -> _get("name");
+		$price = $product -> _get("price");
+		$category = $product -> _get("category");
+		echo "<tr>";
+		echo "<td>$id</td>";
+		echo "<td>$name</td>";
+		echo "<td>$price</td>";
+		echo "<td>$category</td>";
+		echo "<td><a href='index.php?page=changeproductscreen&productid=$id'>Change</a></td>";
+		echo "<td><a href='index.php?page=deleteproduct&productid=$id' onclick=\"return confirm('Are you sure you want to delete $name?');\">Delete</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
+}
+
 function printproducts($connection,$category)
 {
 	if ($category != null)
@@ -68,7 +92,7 @@ function printproducts($connection,$category)
 		$price = $product -> _get("price");
 		$description = $product -> _get("description");
 		$image = $product -> _get("image");
-		$category_name = $product -> _get("category_name");
+		$category = $product -> _get("category");
 		
 		echo "<div class=\"col-md-4\">";
 			echo "<p><a href=\"index.php?page=product&amp;productid=$id\">\n";

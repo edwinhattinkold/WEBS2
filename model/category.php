@@ -4,6 +4,8 @@
 		private $name;
 		private $description;
 		private $product_ids;
+		private $categorytype_name;
+		
 		
 		public function _get($property) {
 			if (property_exists($this, $property)) {

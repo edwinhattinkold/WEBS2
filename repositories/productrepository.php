@@ -48,7 +48,7 @@
 	
 	function getProductsInCategory($connection,$category)
 	{
-		$query = "SELECT * FROM products WHERE category_name = ?";
+		$query = "SELECT * FROM products WHERE category = ?";
 		$stmt = $connection->prepare($query);
 		$stmt->bind_param('s',$category);
 		if (!$stmt->execute()) 
@@ -77,13 +77,15 @@
 	{
 		$name = $product -> _get("name");
 		$description = $product -> _get("description");
+		$short_description = $product -> _get("short_description");
 		$price = $product -> _get("price");
 		$image = $product -> _get("image");
-		$category_name = $product -> _get("category_name");
+		$category = $product -> _get("category");
+		$subcategory = $product -> _get("subcategory");
 		
-		$query ="INSERT INTO products (name,description,price,image,category_name) VALUES (?,?,?,?,?);";
+		$query ="INSERT INTO products (name,description,price,image,category,short_description,subcategory) VALUES (?,?,?,?,?,?,?);";
 		$stmt = $connection->prepare($query);
-		$stmt->bind_param('ssiss',$name,$description,$price,$image,$category_name);
+		$stmt->bind_param('ssissss',$name,$description,$price,$image,$category,$short_description,$subcategory);
 		if (!$stmt->execute()) 
 		{
 			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
@@ -100,11 +102,25 @@
 		$description = $product -> _get("description");
 		$price = $product -> _get("price");
 		$image = $product -> _get("image");
-		$category_name = $product -> _get("category_name");
+		$category = $product -> _get("category");
+		$subcategory = $product -> _get("subcategory");
+		$short_description = $product -> _get("short_description");
 		
-		$query ="UPDATE products SET name=?, description=?, price=?, image=?, category_name=? WHERE id=?;";
+		$query ="UPDATE products SET name=?, description=?, price=?, image=?, category=?, short_description=?, subcategory=? WHERE id=?;";
 		$stmt = $connection->prepare($query);
-		$stmt->bind_param('ssissi',$name,$description,$price,$image,$category_name,$id);
+		$stmt->bind_param('ssissssi',$name,$description,$price,$image,$category,$short_description,$subcategory,$id);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$stmt -> close();
+	}
+	
+	function deleteProduct($connection,$id)
+	{		
+		$query ="DELETE FROM products WHERE id=?;";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('i',$id);
 		if (!$stmt->execute()) 
 		{
 			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;

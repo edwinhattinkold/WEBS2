@@ -1,9 +1,9 @@
 <?php
 	include_once 'model/category.php';
 		
-	function getAllCategories($connection)
+	function getAllMainCategories($connection)
 	{
-		$query = "SELECT * FROM category";
+		$query = "SELECT * FROM category WHERE categorytype_name = 'maincategory'";
 		$result =$connection->query($query);
 		
 		$i = 0;
@@ -16,7 +16,40 @@
 				$categories[$i] -> _set($key, $value);
 			}
 			
-			$query2 = "SELECT * FROM products WHERE category_name = '".$categories[$i]->_get("name")."'";
+			$query2 = "SELECT * FROM products WHERE category = '".$categories[$i]->_get("name")."'";
+			$result2 = $connection->query($query2);
+			$j = 0;
+			$product_ids = array();
+			while($row = $result2->fetch_assoc())
+			{
+				$product_ids[$j] = $row["id"];
+				$j++;
+			}
+			$categories[$i] -> _set("product_ids",$product_ids);
+			
+			$i++;
+		}
+		
+		$result->close();
+		return $categories;
+	}
+	
+	function getAllSubCategories($connection)
+	{
+		$query = "SELECT * FROM category WHERE categorytype_name = 'subcategory'";
+		$result =$connection->query($query);
+		
+		$i = 0;
+		$categories = array();
+		
+		while ($row =$result->fetch_assoc())
+		{
+			$categories[$i] = new Category();
+			foreach ($row as $key => $value) {
+				$categories[$i] -> _set($key, $value);
+			}
+			
+			$query2 = "SELECT * FROM products WHERE category = '".$categories[$i]->_get("name")."'";
 			$result2 = $connection->query($query2);
 			$j = 0;
 			$product_ids = array();
@@ -53,7 +86,7 @@
 				$category -> _set($key, $value);
 			}
 			
-			$query2 = "SELECT * FROM products WHERE category_name = '".$category->_get("name")."'";
+			$query2 = "SELECT * FROM products WHERE category = '".$category->_get("name")."'";
 			$result2 = $connection->query($query5);
 			$j = 0;
 			$product_ids = array();

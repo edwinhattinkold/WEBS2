@@ -1,15 +1,11 @@
 <?php
-	class Product
+	class User
 	{
-		private $id;
-		private $name;
-		private $price;
-		private $description;
-		private $short_description;
-		private $image;
-		private $category;
-		private $subcategory;
-		
+		private $username;
+		private $password;
+		private $rights_right;
+		private $customer;
+
 		public function _get($property) {
 			if (property_exists($this, $property)) {
 				return $this->$property;

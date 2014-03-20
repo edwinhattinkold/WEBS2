@@ -178,10 +178,9 @@ CREATE TABLE IF NOT EXISTS `egjhatti_db`.`products_has_orders` (
   CONSTRAINT `fk_products_has_orders_products1`
     FOREIGN KEY (`products_id`)
     REFERENCES `egjhatti_db`.`products` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
