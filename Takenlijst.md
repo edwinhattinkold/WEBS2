@@ -5,11 +5,11 @@
 * Opmaak in css - Thim
 * HTML moet W3C-validated zijn - Thim
 * HTML / code moet voor een developer goed te lezen zijn - Thim
-* Database met zinnige entries - Edwin
+* Database met zinnige entries - Edwin  20-3-2014
 * Winkel wagen en CMS maakt gebruik van sessies
 * Breadcrumb trail - Thim
-* Apart admin gedeelte - Edwin
-* Scherm admin gedeelte af met ww - Edwin
+* Apart admin gedeelte - Edwin  20-3-2014
+* Scherm admin gedeelte af met ww - Edwin  20-3-2014
 * Zorg dat een gebruik zich kan registeren en inloggen - Edwin
 * CMS
 * Producten met korte en lange omschrijving
@@ -22,4 +22,4 @@
 * Klant moet inhoud van winkelwagen kunnen beheren
 * Afrekenen moet mogelijk zijn
 * De shop moet een aantal jQuery elementen bevatten
-* Database updaten - Edwin
+* Database updaten - Edwin 20-3-2014
