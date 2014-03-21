@@ -74,12 +74,12 @@ DROP TABLE IF EXISTS `egjhatti_db`.`customers` ;
 
 CREATE TABLE IF NOT EXISTS `egjhatti_db`.`customers` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `first name` VARCHAR(45) NOT NULL,
+  `first_name` VARCHAR(45) NOT NULL,
   `surname` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `user_username` VARCHAR(45) NOT NULL,
-  `postcode` VARCHAR(45) NULL DEFAULT NULL,
-  `woonplaats` VARCHAR(45) NULL DEFAULT NULL,
+  `zipcode` VARCHAR(45) NULL DEFAULT NULL,
+  `city` VARCHAR(45) NULL,
   `adress` VARCHAR(100) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_customers_user1_idx` (`user_username` ASC),
@@ -89,8 +89,7 @@ CREATE TABLE IF NOT EXISTS `egjhatti_db`.`customers` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 2
-DEFAULT CHARACTER SET = latin1;
+AUTO_INCREMENT = 2;
 
 
 -- -----------------------------------------------------

@@ -1,6 +1,6 @@
 <?php
 	include_once 'model/user.php';
-		
+
 	function getUserByName($connection,$name)
 	{
 		$query = "SELECT * FROM user WHERE username = ?";
@@ -22,5 +22,10 @@
 		}		
 		$result->close();		
 		return $user;		
+	}
+	
+	function addUser($connection,$customer,$user)
+	{
+		
 	}
 ?>

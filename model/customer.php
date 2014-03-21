@@ -2,9 +2,12 @@
 	class Customer
 	{
 		private $id;
-		private $name;
+		private $first_name;
+		
 		private $adress;
 		private $email;
+		private $postcode;
+		private $woonplaats;
 		
 		public function _get($property) {
 			if (property_exists($this, $property)) {
