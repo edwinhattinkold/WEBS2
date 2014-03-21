@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="bannerID">
-			<a href="index.php">
+			<a href="index.php?page=home">
 					<img src="images/banner.png" width="275" height="172" alt="Banner Webshop" />
 					GAMESHOP ET
 			</a>

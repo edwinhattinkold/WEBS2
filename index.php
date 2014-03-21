@@ -3,12 +3,12 @@ session_start();
 include_once 'db/connection.php';
 $connection = openDB();
 include 'functions/header.php'; 
-?>
-<?php
+
 if (isset($_GET['page']))
 {
 	if (file_exists("pages/".$_GET['page'].".php"))
 	{
+		include 'functions/breadcrumb.php';
 		include("pages/".$_GET['page'].".php");
 	}
 	else
@@ -19,7 +19,6 @@ if (isset($_GET['page']))
 else
 {
 	include("pages/home.php");
-}	
-?>
-<?php include 'functions/footer.php'; 
+}
+include 'functions/footer.php'; 
 closeDB($connection);?>
