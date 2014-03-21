@@ -3,11 +3,11 @@
 	{
 		private $id;
 		private $first_name;
-		
 		private $adress;
 		private $email;
-		private $postcode;
-		private $woonplaats;
+		private $zipcode;
+		private $city;
+		private $user_username;
 		
 		public function _get($property) {
 			if (property_exists($this, $property)) {
