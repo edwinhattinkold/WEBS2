@@ -1,10 +1,11 @@
 <div class="container">
 <?php
 include_once 'repositories/userrepository.php';
+include_once 'functions/pwenc.php';
 $myusername = $_POST['username'];
 $mypassword = $_POST['pass'];
 $user = getUserByName($connection,$myusername);
-if ($mypassword == $user -> _get("password"))
+if (encrypt($mypassword,$myusername) == $user -> _get("password"))
 {
 	$_SESSION["username"] = $myusername;
 	header( 'Location:index.php?page=login_succes' );
