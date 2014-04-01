@@ -1,5 +1,6 @@
 <?php
 	include_once 'model/user.php';
+	include_once 'model/customer.php';
 
 	function getUserByName($connection,$name)
 	{
@@ -24,8 +25,38 @@
 		return $user;		
 	}
 	
-	function addUser($connection,$customer,$user)
+	function addCustomer($connection,$customer,$user)
 	{
+		$username = $user -> _get("username");
+		$password = $user -> _get("password");
+		$rights_right = $user -> _get("rights_right");
 		
+		$query ="INSERT INTO user (username,password,rights_right) VALUES (?,?,?);";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('sss',$username,$password,$rights_right);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$stmt -> close();
+		
+		$first_name = $customer -> _get("first_name");
+		$surname = $customer -> _get("surname");
+		$email = $customer -> _get("email");
+		$user_username = $customer -> _get("user_username");
+		$zipcode = $customer -> _get("zipcode");
+		$city = $customer -> _get("city");
+		$adress = $customer -> _get("adress");
+		
+		$query ="INSERT INTO customers (first_name,surname,email,user_username,zipcode,city,adress) VALUES (?,?,?,?,?,?,?);";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('sssssss',$first_name,$surname,$email,$user_username,$zipcode,$city,$adress);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$id = mysqli_insert_id($connection);
+		$stmt -> close();
+		return $id;
 	}
 ?>

@@ -3,6 +3,7 @@
 	{
 		private $id;
 		private $first_name;
+		private $surname;
 		private $adress;
 		private $email;
 		private $zipcode;
