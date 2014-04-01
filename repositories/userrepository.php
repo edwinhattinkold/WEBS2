@@ -25,6 +25,29 @@
 		return $user;		
 	}
 	
+	function getCustomerByName($connection,$name)
+	{
+		$query = "SELECT * FROM customers WHERE user_username = ?";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('s',$name);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$result = $stmt->get_result();
+		
+		$customer = new Customer();
+		
+		while ($row =$result->fetch_assoc())
+		{
+			foreach ($row as $key => $value) {
+				$customer -> _set($key, $value);
+			}
+		}		
+		$result->close();		
+		return $customer;
+	}
+	
 	function addCustomer($connection,$customer,$user)
 	{
 		$username = $user -> _get("username");
