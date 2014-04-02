@@ -1,6 +1,8 @@
 			<div class="container">
 				<div class="footer">
 					<p>
+						</br>
+						</br>
 						&copy; Gameshop ET
 						<!--
 						<br />
