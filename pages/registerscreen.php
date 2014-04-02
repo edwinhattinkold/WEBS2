@@ -3,7 +3,7 @@
 		Username: <input name="username" type="text" value=""/><br/>  
 		Password: <input name="pass" type="password" value=""/><br/>
 		Retype password: <input name="repass" type="password" value=""/><br/>
-		First name: <input name="first_name" type="text" value=""/><br/>  
+		Firstname: <input name="firstname" type="text" value=""/><br/>  
 		Surname: <input name="surname" type="text" value=""/><br/>  
 		Email: <input name="email" type="text" value=""/><br/>  
 		Adress: <input name="adress" type="text" value=""/><br/>  
@@ -12,11 +12,20 @@
 		<input type="submit" value="Register"/>  
 	</form>  -->
 	
+	<script src="assets/js/lib/jquery.js"></script>
+	<script src="assets/js/dist/jquery.validate.js"></script>
+	
 	<script>
-		$("#signupForm").validate({
+		$.validator.setDefaults(
+		{
+			submitHandler: function() { alert("submitted!"); }
+		});
+	
+		$("#registerform").validate(
+		{
 			rules:
 			{
-				first_name: "required",
+				firstname: "required",
 				surname: "required",
 				username: "required",
 				pass: {
@@ -27,7 +36,7 @@
 				{
 					required: true,
 					minlength: 5,
-					equalTo: "#password"
+					equalTo: "#pass"
 				},
 				email:
 				{
@@ -37,13 +46,9 @@
 			},
 			messages:
 			{
-				first_name: "Please enter your firstname",
-				surname: "Please enter your lastname",
-				username:
-				{
-					required: "Please enter a username",
-					minlength: "Your username must consist of at least 2 characters"
-				},
+				firstname: "Please enter your firstname",
+				surname: "Please enter your surname",
+				username: "Please enter a username",
 				pass:
 				{
 					required: "Please provide a password",
@@ -62,12 +67,12 @@
 	
 	<form id="registerform" method="post" action="index.php?page=register">
 		<fieldset>
-			Name (required): <input id="username" name="username" type="text" required /><br/> 
-			Password (required): <input id="pass" name="pass" type="password" required /><br/> 
-			Retype password: <input id="repass" name="repass" type="password" required /><br/> 
-			First name (required): <input id="first_name" name="first_name" type="text" required /><br/> 
-			Surname (required): <input id="surname" name="surname" type="text" required /><br/> 
-			E-Mail (required): <input id="email" name="email" type="email" required /><br/> 
+			Username (required): <input id="username" name="username" type="text" /><br/> 
+			Password (required): <input id="pass" name="pass" type="password" /><br/> 
+			Retype password: <input id="repass" name="repass" type="password" /><br/> 
+			Firstname (required): <input id="firstname" name="firstname" type="text" /><br/> 
+			Surname (required): <input id="surname" name="surname" type="text" /><br/> 
+			E-Mail (required): <input id="email" name="email" type="email" /><br/> 
 			Adress (optional): <input id="adress" name="adress" type="text" /><br/> 
 			Zipcode (optional): <input id="zipcode" name="zipcode" type="text" /><br/> 
 			City (optional): <input id="city" name="city" type="text" /><br/> 

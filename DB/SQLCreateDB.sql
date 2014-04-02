@@ -74,7 +74,7 @@ DROP TABLE IF EXISTS `egjhatti_db`.`customers` ;
 
 CREATE TABLE IF NOT EXISTS `egjhatti_db`.`customers` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `first_name` VARCHAR(45) NOT NULL,
+  `firstname` VARCHAR(45) NOT NULL,
   `surname` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `user_username` VARCHAR(45) NOT NULL,

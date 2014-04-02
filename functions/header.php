@@ -3,9 +3,6 @@
 	<head>
 	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
 	
-	<script src="assets/js/jquery-2.1.0.js"></script>
-	<script src="assets/js/jquery.validate.js"></script>
-	<script src="assets/js/jquery.js"></script>
 		<title>
 			Webshop
 		</title>

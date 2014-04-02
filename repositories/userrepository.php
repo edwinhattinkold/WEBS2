@@ -63,7 +63,7 @@
 		}
 		$stmt -> close();
 		
-		$first_name = $customer -> _get("first_name");
+		$firstname = $customer -> _get("firstname");
 		$surname = $customer -> _get("surname");
 		$email = $customer -> _get("email");
 		$user_username = $customer -> _get("user_username");
@@ -71,9 +71,9 @@
 		$city = $customer -> _get("city");
 		$adress = $customer -> _get("adress");
 		
-		$query ="INSERT INTO customers (first_name,surname,email,user_username,zipcode,city,adress) VALUES (?,?,?,?,?,?,?);";
+		$query ="INSERT INTO customers (firstname,surname,email,user_username,zipcode,city,adress) VALUES (?,?,?,?,?,?,?);";
 		$stmt = $connection->prepare($query);
-		$stmt->bind_param('sssssss',$first_name,$surname,$email,$user_username,$zipcode,$city,$adress);
+		$stmt->bind_param('sssssss',$firstname,$surname,$email,$user_username,$zipcode,$city,$adress);
 		if (!$stmt->execute()) 
 		{
 			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;

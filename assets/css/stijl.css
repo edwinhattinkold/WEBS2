@@ -1,0 +1,176 @@
+@font-face
+{
+	font-family:		ourfont;
+	src:		url(fonts.ttf);
+}
+
+body
+{
+	background-color:	black;
+	padding:	0px;
+	margin:	0px;
+	width:	100%;
+	height:	100%;
+	color:		white;
+	font-family:		calibri;
+}
+
+h2
+{
+	text-align:	center;
+	text-decoration:	underline;
+}
+
+a
+{
+	text-decoration:		none;
+}
+
+ a:hover
+{
+	color:		white;
+}
+
+a:visited
+{
+	color:		white;
+}
+
+#bannerID
+{
+	height:	187px;
+	width:	100%;
+	margin:	0 auto;
+	font-family:		ourfont;
+	font-size:		60px;
+	text-align:	center;
+}
+
+#bannerID a
+{
+display: block;
+}
+
+#footer
+{
+	width:	100%;
+	border-top-style:	solid;
+	border-top-width:	2px;
+	text-align:	center;
+	font-size: 10px;
+}
+
+#footer a
+{
+	text-decoration:	underline;
+	color:		white;
+}
+
+#footer a: visited
+{
+	color:		white;
+}
+
+#menu
+{
+	border-bottom-style:	solid;
+	border-top-style:	solid;
+	border-bottom-width:	2px;
+	border-top-width:	2px;
+	width:	100%;
+	color:		white;
+}
+
+#menu a:hover
+{
+	background-color: white;
+	color:	#222222;
+}
+
+#menu a:visited
+{
+	color:		white;
+	display:		block;
+}
+
+#menu a:visited:hover
+{
+	background-color: white;
+	color:	#222222;
+}
+
+#menu  table
+{
+	border:	0px;
+	margin:		auto;
+}
+
+#menu td
+{
+	padding-left:	20px;
+	padding-right:	20px;
+	font-size:	25px;
+	background-color: #222222;
+}
+
+#menu td:hover
+{
+	background-color: white;
+	color:	#222222;
+}
+
+#submenu
+{
+	font-size:	20px;
+	background-color:	#222222;
+	float:	left;
+}
+
+#submenu td
+{
+	border:		0px;
+	padding-top:	15px;
+	padding-bottom:	15px;
+}
+
+#submenu a:hover
+{
+	background-color: white;
+	color:	#222222;
+}
+
+#submenu a:visited
+{
+	color:		white;
+	display:		block;
+}
+
+#submenu a:visited:hover
+{
+	background-color: white;
+	color:	#222222;
+}
+
+#submenu td:hover
+{
+	background-color: white;
+	color:	#222222;
+}
+
+#tekst
+{
+	width:	50%;
+	margin:	auto;
+}
+
+.abouttext
+{
+	text-align:	center;
+}
+
+#progressTable, td
+{
+	border:	1px;
+	border-style:	solid;
+	border-color: black;
+}
