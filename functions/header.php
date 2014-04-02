@@ -1,7 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+	
+	<script src="assets/js/jquery-2.1.0.js"></script>
+	<script src="assets/js/jquery.validate.js"></script>
+	<script src="assets/js/jquery.js"></script>
 		<title>
 			Webshop
 		</title>

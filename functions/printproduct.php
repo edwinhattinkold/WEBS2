@@ -81,7 +81,7 @@ function printproducts($connection,$category)
 		$products = getAllProducts($connection);
 	}
 	$counter = 0;
-	foreach($products as &$product)
+	foreach($products as $product)
 	{
 		if($counter==0)
 		{
