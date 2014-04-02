@@ -33,8 +33,9 @@ function printproduct($connection,$id)
 			echo "Image not available yet.";
 		}
 		echo "</td>";
-		echo "</tr>";
-		echo "</table>";
+		echo "</tr><tr>";
+		echo "<td><h2><a href='index.php?page=addtocart&id=$id'>Add to cart</a></h2></td>";
+		echo "</tr></table>";
 	}
 	else
 	{

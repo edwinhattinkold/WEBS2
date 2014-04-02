@@ -3,7 +3,7 @@ function checkLogin($connection,$right)
 {
 	if (!isset($_SESSION["username"]))
 	{
-		//header('Location: index.php?page=accesdenied');
+		header('Location: index.php?page=accesdenied');
 	}
 	else
 	{
