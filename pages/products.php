@@ -29,3 +29,5 @@ include_once 'functions/printproduct.php';
 		}					
 	?>	
 </div>
+</div>
+</div>
