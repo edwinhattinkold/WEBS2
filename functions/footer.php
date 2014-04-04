@@ -3,6 +3,10 @@
 					<p>
 						</br>
 						</br>
+						</br>
+						</br>
+						</br>
+						</br>
 						&copy; Gameshop ET
 						<!--
 						<br />

@@ -73,6 +73,33 @@
 		return $products;
 	}
 	
+	function getProductsInSubcategory($connection,$category)
+	{
+		$query = "SELECT * FROM products WHERE subcategory = ?";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('s',$category);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$result = $stmt->get_result();
+		
+		$i = 0;
+		$products = array();
+		
+		while ($row =$result->fetch_assoc())
+		{
+			$products[$i] = new Product();
+			foreach ($row as $key => $value) {
+				$products[$i] -> _set($key, $value);
+			}
+			$i++;
+		}
+		
+		$result->close();
+		return $products;
+	}
+	
 	function addProduct($connection,$product)
 	{
 		$name = $product -> _get("name");

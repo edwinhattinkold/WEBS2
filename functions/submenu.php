@@ -3,7 +3,7 @@
 	<?php
 		include_once 'repositories/categoryrepository.php';
 		
-		$categories = getAllMainCategories($connection);
+		$categories = getAllSubCategories($connection);
 		
 		foreach($categories as &$category)
 		{
