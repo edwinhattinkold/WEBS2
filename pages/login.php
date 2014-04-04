@@ -1,4 +1,4 @@
-</div><br/><br/>
+<br/><br/></div>
 <?php
 /*
 Edwin Hattink 	2063703

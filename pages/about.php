@@ -10,11 +10,11 @@ Thim Heider		2066993
 	<div class="col-md-8 col-md-offset-2 text-center">
 		<h2>About</h2>
 		Deze site is gemaakt in opdracht van de Avans Hogenschool, voor de course Websites2.
-		</br>
+		<br/>
 		Deze site is gemaakt door:
-		</br>
+		<br/>
 		Edwin Hattink - groep 42IN07SOl,
-		</br>
+		<br/>
 		Thim Heider - groep 42IN07SOl
 	</div>
 </div>

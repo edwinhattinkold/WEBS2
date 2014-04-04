@@ -1,4 +1,4 @@
-</div><br/><br/>
+<br/><br/></div>
 <?php
 	include_once 'functions/checklogin.php';
 	checkLogin($connection, "admin");

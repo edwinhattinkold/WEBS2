@@ -125,7 +125,7 @@ function printproducts($connection,$category)
 		$counter++;
 		if($counter==3)
 		{
-			echo"</div></br>";
+			echo"</div><br/>";
 			$counter=0;
 		}
 	}
