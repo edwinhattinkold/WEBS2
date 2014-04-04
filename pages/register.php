@@ -13,7 +13,7 @@
 		$user -> _set("rights_right","customer");
 		
 		$customer -> _set("user_username", $_POST["username"]);
-		$customer -> _set("firstname", $_POST["firstname"]);
+		$customer -> _set("first_name", $_POST["first_name"]);
 		$customer -> _set("surname", $_POST["surname"]);
 		$customer -> _set("email", $_POST["email"]);
 		$customer -> _set("adress", $_POST["adress"]);
