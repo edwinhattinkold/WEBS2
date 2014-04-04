@@ -9,6 +9,8 @@ if(isset($_GET['productid']))
 	echo " >> " . $_GET['productid'];
 }
 ?>
+</div>
+<br /><br />
 <div class="container">
 	<?php 
 	include_once 'functions/checklogin.php';
