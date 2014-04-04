@@ -74,7 +74,11 @@ function printproducts($connection,$category)
 		$products = getProductsInCategory($connection,$category);
 		if ($products == null)
 		{
-			echo "You entered the wrong category.";
+			$products = getProductsInSubcategory($connection, $category);
+			if($products == null)
+			{
+				echo "You entered the wrong category.";
+			}
 		}
 	}
 	else
