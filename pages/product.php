@@ -8,7 +8,7 @@ Thim Heider		2066993
 <?php 
 if(isset($_GET['productid']))
 {
-	echo " >> " . $_GET['productid'];
+	echo " >> " . $_GET['productid'] . "</div>";
 }
 include_once 'functions/printproduct.php';
 ?>

@@ -1,3 +1,4 @@
+</div>
 <?php
 /*
 Edwin Hattink 	2063703
