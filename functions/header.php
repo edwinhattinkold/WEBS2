@@ -1,8 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
-	
+		<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+		<script src="assets/js/lib/jquery.js"></script>
+		<script src="assets/js/dist/jquery.validate.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#registerform").validate({
+				rules: {
+					email:
+					{
+						required:true,
+						email: true,
+					},
+				}
+
+			});
+		});
+		</script>
 		<title>
 			Webshop
 		</title>

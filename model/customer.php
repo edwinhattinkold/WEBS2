@@ -2,7 +2,7 @@
 	class Customer
 	{
 		private $id;
-		private $firstname;
+		private $first_name;
 		private $surname;
 		private $adress;
 		private $email;

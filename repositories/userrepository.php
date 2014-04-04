@@ -63,7 +63,7 @@
 		}
 		$stmt -> close();
 		
-		$firstname = $customer -> _get("firstname");
+		$first_name = $customer -> _get("first_name");
 		$surname = $customer -> _get("surname");
 		$email = $customer -> _get("email");
 		$user_username = $customer -> _get("user_username");
@@ -71,15 +71,22 @@
 		$city = $customer -> _get("city");
 		$adress = $customer -> _get("adress");
 		
-		$query ="INSERT INTO customers (firstname,surname,email,user_username,zipcode,city,adress) VALUES (?,?,?,?,?,?,?);";
-		$stmt = $connection->prepare($query);
-		$stmt->bind_param('sssssss',$firstname,$surname,$email,$user_username,$zipcode,$city,$adress);
-		if (!$stmt->execute()) 
-		{
-			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		$query2 ="INSERT INTO customers (first_name,surname,email,user_username,zipcode,city,adress) VALUES (?,?,?,?,?,?,?);";
+		if (!$stmt2 = $connection->prepare($query2))
+		{ 
+			echo 'Error: ' . $connection->error;
+			return false;
 		}
-		$id = mysqli_insert_id($connection);
-		$stmt -> close();
-		return $id;
+		else
+		{
+			$stmt2->bind_param("sssssss",$first_name,$surname,$email,$user_username,$zipcode,$city,$adress);
+			if (!$stmt2->execute()) 
+			{
+				echo "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error;
+			}
+			$id = mysqli_insert_id($connection);
+			$stmt2 -> close();
+			return $id;
+		}		
 	}
 ?>
