@@ -1,3 +1,10 @@
+<?php
+/*
+Edwin Hattink 	2063703
+Thim Heider		2066993
+42IN07SOl
+*/
+?>
 <div class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">

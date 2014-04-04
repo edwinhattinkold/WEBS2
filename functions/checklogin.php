@@ -1,4 +1,11 @@
 <?php
+/*
+Edwin Hattink 	2063703
+Thim Heider		2066993
+42IN07SOl
+*/
+?>
+<?php
 function checkLogin($connection,$right)
 {
 	if (!isset($_SESSION["username"]))
