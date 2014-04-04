@@ -13,6 +13,10 @@ include 'functions/header.php';
 
 if (isset($_GET['page']))
 {
+	if($_GET['page'] != 'home')
+	{
+		echo "<div class='container'>home >> " . $_GET['page'] ;
+	}
 	if (file_exists("pages/".$_GET['page'].".php"))
 	{
 		include("pages/".$_GET['page'].".php");

@@ -6,6 +6,10 @@ Thim Heider		2066993
 */
 ?>
 <?php 
+if(isset($_GET['category']))
+{
+	echo " >> " . $_GET['category'];
+}
 include_once 'functions/printproduct.php'; 
 ?>
 <div class="col-md-2">

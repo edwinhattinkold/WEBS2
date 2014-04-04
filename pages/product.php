@@ -6,6 +6,10 @@ Thim Heider		2066993
 */
 ?>
 <?php 
+if(isset($_GET['productid']))
+{
+	echo " >> " . $_GET['productid'];
+}
 include_once 'functions/printproduct.php';
 ?>
 <div class="row">
