@@ -1,2 +1,1 @@
-WEBS2
-=====
+De site is te bezoeken op http://student.aii.avans.nl/ict/egjhatti
