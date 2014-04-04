@@ -30,11 +30,11 @@ if(isset($_GET['name']))
 			$categorytype_name = $category->_get("categorytype_name");
 			
 	?>
-			<form enctype="multipart/form-data" action="index.php?page=changecategory" method="POST">
+			<form enctype="multipart/form-data" action="index.php?page=categorychange" method="POST">
 				Category name: <input type="text" name="name" value="<?php echo $name ?>"/><br/>
 				<input type="hidden" name="oldname" value="<?php echo $name ?>"/>
 				Category type: <select name="type">
-					<option value="$categorytype_name"><?php echo $categorytype_name ?></option>
+					<option value="<?php echo $categorytype_name ?>"><?php echo $categorytype_name ?></option>
 					<?php
 					if($categorytype_name == "maincategory")
 					{
@@ -47,7 +47,7 @@ if(isset($_GET['name']))
 					?>
 					
 				</select><br/>
-				<input type="submit" name="send" value="Change category"/>
+				<input type="submit" name="send" value="Change Category"/>
 			</form>
 	<?php
 		}

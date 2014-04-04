@@ -133,6 +133,11 @@ Thim Heider		2066993
 		$query ="UPDATE category SET name=?, categorytype_name=? WHERE name=?;";
 		$stmt = $connection->prepare($query);
 		$stmt->bind_param('sss',$name,$categorytype_name,$oldname);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$stmt -> close();
 	}
 	
 	function deleteCategory($connection,$name)
