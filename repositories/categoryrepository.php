@@ -49,7 +49,7 @@
 				$categories[$i] -> _set($key, $value);
 			}
 			
-			$query2 = "SELECT * FROM products WHERE category = '".$categories[$i]->_get("name")."'";
+			$query2 = "SELECT * FROM products WHERE subcategory = '".$categories[$i]->_get("name")."'";
 			$result2 = $connection->query($query2);
 			$j = 0;
 			$product_ids = array();
@@ -69,7 +69,7 @@
 	
 	function getCategoryByName($connection,$name)
 	{
-		$query = "SELECT * FROM category WHERE name = '".$name."'";
+		$query = "SELECT * FROM category WHERE name =?";
 		$stmt = $connection->prepare($query);
 		$stmt->bind_param('s',$name);
 		if (!$stmt->execute()) 
@@ -87,7 +87,7 @@
 			}
 			
 			$query2 = "SELECT * FROM products WHERE category = '".$category->_get("name")."'";
-			$result2 = $connection->query($query5);
+			$result2 = $connection->query($query2);
 			$j = 0;
 			$product_ids = array();
 			while($row = $result2->fetch_assoc())
@@ -98,6 +98,45 @@
 			$category -> _set("product_ids",$product_ids);
 		}
 		$result->close();		
-		return category;		
+		return $category;		
+	}
+	
+	function addCategory($connection,$category)
+	{
+		$name = $category->_get("name");
+		$categorytype_name = $category->_get("categorytype_name");
+		
+		$query = "INSERT INTO category (name,categorytype_name) VALUES (?,?);";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('ss',$name,$categorytype_name);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$id = mysqli_insert_id($connection);
+		$stmt -> close();
+		return $id;
+	}
+	
+	function updateCategory($connection,$category,$oldname)
+	{
+		$name = $category->_get("name");
+		$categorytype_name = $category->_get("categorytype_name");
+		
+		$query ="UPDATE category SET name=?, categorytype_name=? WHERE name=?;";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('sss',$name,$categorytype_name,$oldname);
+	}
+	
+	function deleteCategory($connection,$name)
+	{
+		$query ="DELETE FROM category WHERE name=?;";
+		$stmt = $connection->prepare($query);
+		$stmt->bind_param('s',$name);
+		if (!$stmt->execute()) 
+		{
+			echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+		}
+		$stmt -> close();
 	}
 ?>
