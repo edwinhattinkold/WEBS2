@@ -35,7 +35,7 @@
 												$name = $categoryitem -> _get("name");
 												$description = $categoryitem -> _get("description");
 												?>
-												<li><a href="index.php?page=products&category=<?php echo $name ?>"><?php echo $name ?> </a></li>
+												<li><a href="index.php?page=products&amp;category=<?php echo $name ?>"><?php echo $name ?> </a></li>
 												<?php
 											}
 											?>
@@ -63,7 +63,7 @@
 												$name = $menuitem -> _get("name");
 												$link = $menuitem -> _get("link");
 												?>
-												<li><a href="index.php?page=<?php echo $link?>"><?php echo $name?></a></li>
+												<li><a href="index.php?page=<?php echo $link?>" class="btn-danger"><?php echo $name?></a></li>
 												<?php
 											}
 										}

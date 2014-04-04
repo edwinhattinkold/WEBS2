@@ -116,7 +116,7 @@ function printproducts($connection,$category)
 		if($counter==3)
 		{
 			echo"</div>";
-			echo"<hr>";
+			echo"<hr />";
 			$counter=0;
 		}
 	}

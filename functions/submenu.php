@@ -1,4 +1,4 @@
-<nav>
+
 	<ul class="nav nav-pills nav-stacked">
 	<?php
 		include_once 'repositories/categoryrepository.php';
@@ -11,8 +11,8 @@
 			$description = $category -> _get("description");
 			
 			?>
-			<li><a href="index.php?page=products&category=<?php echo $name ?>"><?php echo $name ?> </a></li>
+			<li><a href="index.php?page=products&amp;category=<?php echo $name ?>"><?php echo $name ?> </a></li>
 		<?php
 		}
 		?>
-</nav>
+		</ul>

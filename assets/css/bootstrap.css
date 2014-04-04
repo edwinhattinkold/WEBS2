@@ -55,6 +55,7 @@
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
 /*
 .nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
     margin-top: 0;
@@ -2321,8 +2322,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #666666;
+  border-color: #666666;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -2330,8 +2331,8 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger.active,
 .open .dropdown-toggle.btn-danger {
   color: #ffffff;
-  background-color: #d2322d;
-  border-color: #ac2925;
+  background-color: #666666;
+  border-color: #666666;
 }
 .btn-danger:active,
 .btn-danger.active,
