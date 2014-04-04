@@ -4,7 +4,7 @@ if(isset($_GET['name']))
 	echo " >> " . $_GET['name'];
 }
 ?>
-</div>
+</div><br /><br />
 <div class="container">
 	<?php
 	include_once 'functions/checklogin.php';
