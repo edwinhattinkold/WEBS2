@@ -95,11 +95,11 @@ function printproducts($connection,$category)
 		$id = $product -> _get("id");
 		$name = $product -> _get("name");
 		$price = $product -> _get("price");
-		$description = $product -> _get("description");
+		$short_description = $product -> _get("short_description");
 		$image = $product -> _get("image");
 		$category = $product -> _get("category");
 		
-		echo "<div class=\"col-md-4\">";
+		echo "<div class=\"col-md-4 product\">";
 			echo "<p><a href=\"index.php?page=product&amp;productid=$id\">\n";
 			if ($image != null)
 			{
@@ -110,13 +110,12 @@ function printproducts($connection,$category)
 				echo "Image not available yet.\n";
 			}
 			echo "</a></p>\n";
-			echo "<h2><a href=\"index.php?page=product&amp;productid=$id\">$name</a></h2>\n";
+			echo "<h2><a href=\"index.php?page=product&amp;productid=$id\">$name</a></h2>$short_description\n";
 		echo "</div>";
 		$counter++;
 		if($counter==3)
 		{
-			echo"</div>";
-			echo"<hr />";
+			echo"</div></br>";
 			$counter=0;
 		}
 	}
