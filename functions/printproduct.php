@@ -1,4 +1,11 @@
 <?php
+/*
+Edwin Hattink 	2063703
+Thim Heider		2066993
+42IN07SOl
+*/
+?>
+<?php
 include_once 'repositories/productrepository.php';
 function printproduct($connection,$id)
 {
@@ -8,6 +15,7 @@ function printproduct($connection,$id)
 	$name = $product -> _get("name");
 	$price = $product -> _get("price");
 	$description = $product -> _get("description");
+	$short_description = $product -> _get("short_description");
 	$image = $product -> _get("image");
 	$category = $product -> _get("category");
 	
@@ -19,6 +27,8 @@ function printproduct($connection,$id)
 		echo "</tr><tr>";
 		echo "<td>Article number: $id</td>";
 		echo "</tr><tr>";
+		echo "<td>$short_description</td>";
+		echo "</tr><tr>";
 		echo "<td>Price: &#8364; $price</td>";
 		echo "</tr><tr>";
 		echo "<td>$description</td>";
@@ -26,7 +36,7 @@ function printproduct($connection,$id)
 		echo "<td>";
 		if ($image != null)
 		{
-			echo "<img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/ class='thumbnail'>";
+			echo "<a href='index.php?page=imagescreen&amp;image=$image'><img src=\"$image\" height=\"300\" width =\"200\" alt=\"$name\"/ class='thumbnail'/></a>";
 		}
 		else
 		{
@@ -95,11 +105,11 @@ function printproducts($connection,$category)
 		$id = $product -> _get("id");
 		$name = $product -> _get("name");
 		$price = $product -> _get("price");
-		$description = $product -> _get("description");
+		$short_description = $product -> _get("short_description");
 		$image = $product -> _get("image");
 		$category = $product -> _get("category");
 		
-		echo "<div class=\"col-md-4\">";
+		echo "<div class=\"col-md-4 product\">";
 			echo "<p><a href=\"index.php?page=product&amp;productid=$id\">\n";
 			if ($image != null)
 			{
@@ -110,13 +120,12 @@ function printproducts($connection,$category)
 				echo "Image not available yet.\n";
 			}
 			echo "</a></p>\n";
-			echo "<h2><a href=\"index.php?page=product&amp;productid=$id\">$name</a></h2>\n";
+			echo "<h2><a href=\"index.php?page=product&amp;productid=$id\">$name</a></h2>$short_description\n";
 		echo "</div>";
 		$counter++;
 		if($counter==3)
 		{
-			echo"</div>";
-			echo"<hr />";
+			echo"</div></br>";
 			$counter=0;
 		}
 	}

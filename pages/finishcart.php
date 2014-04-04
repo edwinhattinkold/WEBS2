@@ -1,3 +1,10 @@
+<?php
+/*
+Edwin Hattink 	2063703
+Thim Heider		2066993
+42IN07SOl
+*/
+?>
 <div class="container">
 	<p>
 		<?php
@@ -13,7 +20,7 @@
 				echo "<h2 class='text-center'>Your cart</h2>";
 				echo "<h3>These are your ordered products:</h3>";
 				echo "<table class='table'>";
-				echo "<tr><th>Product:</th><th>Ammount of product:</th><th>Price:</th></tr>";
+				echo "<tr><th>Product:</th><th>Amount of product:</th><th>Price:</th></tr>";
 				$cart = $_SESSION['cart'];
 				sort($cart);
 				$amountofitems=1;

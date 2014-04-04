@@ -8,14 +8,14 @@ Thim Heider		2066993
 <?php
 include_once 'functions/checklogin.php';
 checkLogin($connection,"admin");
-include_once 'repositories/productrepository.php';
-if (!isset($_GET['productid']))
+include_once 'repositories/orderrepository.php';
+if (!isset($_GET['id']))
 {
 	echo "You entered the page incorrectly, please try again.";
 }
 else
 {
-	deleteProduct($connection,$_GET['productid']);
-	header('Location:index.php?page=adminproductlist');
+	deleteOrder($connection,$_GET['id']);
+	header('Location:index.php?page=manageorders');
 }
 ?>

@@ -1,3 +1,10 @@
+<?php
+/*
+Edwin Hattink 	2063703
+Thim Heider		2066993
+42IN07SOl
+*/
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
@@ -15,6 +22,24 @@
 					},
 				}
 
+			});
+		});
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#search-criteria").on("keyup", function() {
+				var criteria = $(this).val().toLowerCase();
+				$(".product").each( function() {
+					var article = $(this).text().toLowerCase();
+					if (article.search(criteria)!=-1)
+					{
+						$(this).show();
+					}
+					else
+					{
+						$(this).hide();
+					}
+				});
 			});
 		});
 		</script>
