@@ -1,4 +1,4 @@
-</div></br></br>
+</div><br/><br/>
 <?php
 /*
 Edwin Hattink 	2063703
@@ -55,7 +55,7 @@ Thim Heider		2066993
 				}
 				echo "<tr><th></th><th>Total price:</th><th>&euro;$totalprice</th></tr>";
 				echo "</table>";
-				echo "<h4>Order finished</h4></br>";
+				echo "<h4>Order finished</h4><br/>";
 				echo "<a href='index.php?page=home' class='btn btn-primary btn-xs active' role='button'>home</a>";
 			}
 			else

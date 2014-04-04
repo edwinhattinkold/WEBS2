@@ -1,4 +1,4 @@
-</div></br></br>
+</div><br/><br/>
 <?php
 if (!isset($_GET['id']))
 {
